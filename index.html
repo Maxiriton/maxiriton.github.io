@@ -6,6 +6,7 @@
     <title>Henri Hebeisen - Directeur Technique</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="assets/css/main.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body class="bg-altlight">
     <div class="container">
@@ -18,16 +19,17 @@
             <li class="nav-item"><a href="#" class="nav-link nav-link-ltr">A propos</a></li>
             <li class="nav-item"><a href="#" class="nav-link nav-link-ltr">Contact</a></li>
             <li class="nav-item"><a href="https://mastodon.social/@henrih" class="nav-link nav-link-ltr"><i class="bi bi-mastodon"></i></a></li>
+            <li class="nav-item"><a href="mailto:henri.hebeisen@gmail.com" class="nav-link nav-link-ltr"><i class="bi bi-envelope"></i></a></li>
           </ul>
         </header>
     </div>
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <img src="img/rocket.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            <img src="img/rocket.jpg" class="d-block mx-lg-auto img-fluid reveal-medium" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
           </div>
           <div class="col-lg-6">
-            <div class="row">
+            <div class="row reveal-fast">
               <div class="col-2">
                 <p class="lead"><em>Bonjour,</em></p>
               </div>
@@ -35,7 +37,7 @@
                 <hr class="my-3">
               </div>
             </div>
-            <div class="row">
+            <div class="row reveal-slow">
               <p class="lead">Utilisateur de Blender depuis une quinzaine d’années, j'accompagne les plus grandes entreprises dans la réussite de leurs projets grâce à mon expertise technique. Je suis actuellement directeur technique du <strong>studio 3.0</strong> à Angouleme et je travaille également comme consultant freelance, formateur certifié et auteur de nombreuses formations sur le logiciel Blender. </p>
               <p class="lead">Pour me contacter, vous m'envoyer un mail à : <span class="fw-bold">henri.hebeisen@gmail.com</span></p>
             </div>
@@ -43,5 +45,10 @@
         </div>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        ScrollReveal().reveal('.reveal-fast', { duration: 1500 });
+        ScrollReveal().reveal('.reveal-medium', { duration: 2500 });
+        ScrollReveal().reveal('.reveal-slow', { duration: 3500 });
+    </script>
   </body>
 </html>
