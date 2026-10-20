@@ -93,3 +93,134 @@ img {
 .fadeIn-bottom {
     top: 80%
 }
+
+/* ==========================================================
+   Page d'accueil : hero plein écran avec vidéo
+   ========================================================== */
+.hero {
+    position: relative;
+    height: 100vh;
+    height: 100svh;            /* mobile : tient compte des barres du navigateur */
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #2A2A21; /* visible tant que la vidéo n'est pas chargée */
+    color: #fff;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* voile sombre léger pour garder le texte lisible sur n'importe quelle image */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .45) 0%, rgba(0, 0, 0, .2) 45%, rgba(0, 0, 0, .45) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    text-wrap: balance;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, .45);
+}
+
+/* menu transparent posé au-dessus de la vidéo (il défile avec la page) */
+.site-header {
+    position: fixed;           /* reste collé en haut pendant le défilement */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: transparent;   /* transparent sur la vidéo */
+    transition: background-color .3s ease, -webkit-backdrop-filter .3s ease, backdrop-filter .3s ease;
+}
+
+/* une fois le hero dépassé : voile très léger et flou discret pour que le menu
+   reste lisible quand le texte de la page défile derrière */
+.site-header.is-past-hero {
+    background-color: rgba(226, 218, 201, .45);   /* beige de la page, à 45 % */
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+/* anciens navigateurs sans flou : un peu plus opaque pour garder la lisibilité */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .site-header.is-past-hero {
+        background-color: rgba(226, 218, 201, .88);
+    }
+}
+
+/* barre plus compacte une fois le hero dépassé */
+.site-header.is-past-hero > .container {
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+}
+
+/* mobile : une seule ligne une fois le menu collé */
+@media (max-width: 767.98px) {
+    .site-header.is-past-hero a.link-light {
+        display: none !important;
+    }
+}
+
+.site-header .nav-link {
+    --bs-nav-link-color: #fff;
+    --bs-nav-link-hover-color: #fff;
+    background-image: linear-gradient(#fff 0 0);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
+    transition: background-size .3s, background-position 0s .3s, color .3s;
+}
+
+.site-header a.link-light {
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
+    transition: color .3s;
+}
+
+/* après le hero : texte sombre (le fond de page est clair), toujours sans fond */
+.site-header.is-past-hero .nav-link {
+    --bs-nav-link-color: #2A2A21;
+    --bs-nav-link-hover-color: #2A2A21;
+    background-image: linear-gradient(#2A2A21 0 0);
+    text-shadow: none;
+}
+
+.site-header.is-past-hero a.link-light {
+    color: #2A2A21 !important;
+    text-shadow: none;
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    text-decoration: none;
+    animation: hero-bounce 2s ease-in-out infinite;
+}
+
+@keyframes hero-bounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50%      { transform: translate(-50%, 8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-scroll { animation: none; }
+}
