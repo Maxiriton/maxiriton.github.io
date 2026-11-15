@@ -16,8 +16,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="assets/css/main.css" rel="stylesheet">
-    <link href="assets/css/custom.css" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+    <link href="assets/css/custom.css?v=2026-11-15c" rel="stylesheet">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -45,7 +44,7 @@
             "founder": { "@id": "https://www.henri-hebeisen.com/#henri" },
             "areaServed": ["FR", "CH", "BE"],
             "availableLanguage": ["fr", "en"],
-            "serviceType": ["Formation Blender", "Consulting Blender"]
+            "serviceType": ["Formation Blender", "Consulting Blender", "Direction technique 3D"]
           }
         ]
       }
@@ -54,23 +53,21 @@
   </head>
   <body class="bg-altlight">
     <header class="site-header">
-      <div class="container d-flex flex-wrap justify-content-center py-3">
-        <a href="https://www.henri-hebeisen.com" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-light text-decoration-none">
+      <div class="container-fluid px-4 d-flex flex-wrap justify-content-center py-3">
+        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-light text-decoration-none">
           <span class="fs-4">Henri Hebeisen</span>
         </a>
-
         <ul class="nav nav-pills">
           <li class="nav-item"><a href="projets.html" class="nav-link nav-link-ltr">Projets</a></li>
           <li class="nav-item"><a href="formation.html" class="nav-link nav-link-ltr">Formation</a></li>
+          <li class="nav-item"><a href="prestations.html" class="nav-link nav-link-ltr">Prestations</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link nav-link-ltr">Contact</a></li>
-          <li class="nav-item"><a href="https://mastodon.social/@henrih" class="nav-link nav-link-ltr" aria-label="Mastodon"><i class="bi bi-mastodon"></i></a></li>
         </ul>
       </div>
     </header>
 
     <main>
       <section class="hero">
-        <!-- Vidéo décorative : le texte du h1 reste du vrai texte pour le référencement -->
         <video class="hero-video" autoplay muted loop playsinline preload="auto"
                poster="img/hero-poster.jpg" aria-hidden="true" tabindex="-1">
           <source src="videos/hero.webm" type="video/webm">
@@ -79,230 +76,256 @@
         <div class="hero-content container text-center">
           <h1 class="display-3 fw-bold">Directeur Technique, généraliste 3D et formateur Blender</h1>
         </div>
-        <a href="#intro" class="hero-scroll" aria-label="Voir la suite de la page"><i class="bi bi-chevron-down"></i></a>
+        <a href="#projets" class="hero-scroll" aria-label="Voir les projets"><i class="bi bi-chevron-down"></i></a>
       </section>
 
-      <!-- 1. Expertise -->
-      <div id="intro" class="container col-xxl-8 px-4 pt-5">
-        <section class="row flex-lg-row align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
-            <img src="img/rocket.jpg" class="d-block mx-lg-auto img-fluid reveal-medium" alt="Projet Rocket : rendu 3D réalisé avec Blender" width="700" height="500" loading="lazy">
+      <!-- 1. PROJETS : les images d'abord, texte réduit à une légende -->
+      <section id="projets" class="work" aria-labelledby="projets-titre">
+        <div class="work-head">
+          <div>
+            <p class="eyebrow">Projets sélectionnés</p>
+            <h2 id="projets-titre">Travaux</h2>
           </div>
-          <div class="col-lg-6 reveal-slow ">
-            <p>Utilisateur de Blender depuis une quinzaine d'années, j'accompagne entreprises, studios
-              et indépendants dans la réussite de leurs projets 3D grâce à mon expertise technique.</p>
-            <p>
-              <a href="contact.html" class="btn btn-outline-secondary btn-lg px-4" role="button">Me contacter</a>
-            </p>
-          </div>
-        </section>
+          <a href="projets.html" class="link-arrow">Tous les projets →</a>
+        </div>
 
-        <section>
-          <h2>Consulting Blender et direction technique</h2>
-          <p>Je suis directeur technique du studio 3.0 à Angoulême et consultant freelance.
-            J'interviens pour structurer un pipeline de production, résoudre un blocage technique,
-            former et encadrer une équipe, auditer vos workflows... Mais aussi développement d'addons et d'extensions, setup de Geometry Nodes ou mise en place de LookDev.</p>
-        </section>
+        <div class="work-grid">
+          <article class="tile tile--wide">
+            <a href="work/marchandise.html">
+              <div class="tile-media">
+                <img src="img/projects/lppm/la-plus-precieuse-des-marchandises.jpg" alt="" loading="lazy">
+                <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1">
+                  <source src="videos/home/lppm.webm" type="video/webm">
+                  <source src="videos/home/lppm.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="tile-caption">
+                <strong>La Plus Précieuse des Marchandises</strong>
+                <span class="eyebrow">Long métrage · Direction technique</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tile--7">
+            <a href="work/tudor.html">
+              <div class="tile-media">
+                <img src="img/projects/tudor.jpg" alt="" loading="lazy">
+                <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1">
+                  <source src="videos/home/tudor.webm" type="video/webm">
+                  <source src="videos/home/tudor.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="tile-caption">
+                <strong>Tudor — Heritage Ranger</strong>
+                <span class="eyebrow">Modélisation · Lookdev</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tile--5">
+            <a href="work/clann-arise.html">
+              <div class="tile-media">
+                <img src="img/projects/arise.jpg" alt="" loading="lazy">
+                <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1">
+                  <source src="videos/home/clann.webm" type="video/webm">
+                  <source src="videos/home/clann.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="tile-caption">
+                <strong>Clann — Arise</strong>
+                <span class="eyebrow">Visualizer · Cycles</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tile--5">
+            <a href="work/rocket.html">
+              <div class="tile-media">
+                <img src="img/rocket.jpg" alt="" loading="lazy">
+              </div>
+              <div class="tile-caption">
+                <strong>Rocket Project</strong>
+                <span class="eyebrow">Court métrage · En cours</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="tile tile--7">
+            <a href="work/airbus-future-factory.html">
+              <div class="tile-media">
+                <img src="img/projects/airbus_future_factory.jpg" alt="" loading="lazy">
+                <video muted loop playsinline preload="none" aria-hidden="true" tabindex="-1">
+                  <source src="videos/home/airbus.webm" type="video/webm">
+                  <source src="videos/home/airbus.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="tile-caption">
+                <strong>Airbus — Inside the Future Factory</strong>
+                <span class="eyebrow">Film corporate · Pipeline</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2. FORMATION : une grande photo, un message, une preuve -->
+      <section id="formation" class="training" aria-labelledby="formation-titre">
+        <div class="training-media">
+          <img src="img/formation/training_focal.jpg" alt="Formation Blender en présentiel à Neuchâtel, en Suisse" loading="lazy">
+        </div>
+        <div class="training-body">
+          <p class="eyebrow">Formation</p>
+          <h2 id="formation-titre">Former vos équipes à Blender, avec l'expérience de la production.</h2>
+          <p class="lead">Formateur certifié, j'anime des formations sur mesure, en présentiel ou à distance, en équipe ou en 1 to 1.</p>
+          <ul class="pill-list" aria-label="Exemples de formations">
+            <li>Migration depuis Maya ou 3ds Max</li>
+            <li>Shading Eevee et Cycles</li>
+            <li>Geometry Nodes</li>
+            <li>Coaching individuel</li>
+          </ul>
+          <figure class="quote">
+            <blockquote><p>« Henri a su trouver le juste équilibre entre technicité et pédagogie. »</p></blockquote>
+            <figcaption>Benjamin Louis, Principal Designer, Forvia</figcaption>
+          </figure>
+          <p class="mb-0"><a href="formation.html" class="btn btn-dark btn-lg px-4">Voir les formations</a></p>
+        </div>
+      </section>
+
+      <div class="clients">
+        <p class="eyebrow">Ils m'ont fait confiance</p>
+        <div class="logo-strip">
+          <img src="img/formation/airbus.webp" alt="Airbus" loading="lazy">
+          <img src="img/formation/HSLU.webp" alt="HSLU – Hochschule Luzern" loading="lazy">
+          <img src="img/formation/miju.webp" alt="Miju Games" loading="lazy">
+          <img src="img/formation/forvia.webp" alt="Forvia" loading="lazy">
+          <img src="img/formation/ynov.webp" alt="Ynov" loading="lazy">
+          <img src="img/formation/fees.webp" alt="Les Fées Spéciales" loading="lazy">
+          <img src="img/formation/milan.webp" alt="Milan" loading="lazy">
+          <img src="img/formation/cergy.webp" alt="CY Cergy Paris Université" loading="lazy">
+        </div>
       </div>
 
-      <!-- 2. Exemples de projets (vidéo au survol sur ordinateur, au défilement sur mobile) -->
-      <section id="projets" class="container px-4 py-5">
-        <h2 class="text-center mb-2">Quelques projets</h2>
-        <p class="text-center mb-5">Un aperçu de ce que je réalise en production, et de ce que je transmets ensuite en formation.</p>
-        <div class="row g-4">
-          <div class="col-md-6">
-            <a class="project-card" href="work/tudor.html">
-              <video class="project-video" muted loop playsinline preload="none" poster="img/projects/tudor/front-34.jpg" aria-hidden="true" tabindex="-1">
-                <source src="videos/home/tudor.webm" type="video/webm">
-                <source src="videos/home/tudor.mp4" type="video/mp4">
-              </video>
-              <span class="project-caption">
-                <strong>Tudor | Heritage Ranger</strong>
-                <span>Remodélisation fidèle d'une montre de luxe, du modèle au rig d'animation.</span>
-              </span>
-            </a>
+      <!-- 3. PRESTATIONS : liste numérotée, lisible en un coup d'œil -->
+      <section id="prestations" class="services" aria-labelledby="prestations-titre">
+        <div class="services-intro">
+          <div>
+            <p class="eyebrow">Prestations</p>
+            <h2 id="prestations-titre">Direction technique et consulting Blender</h2>
           </div>
-          <div class="col-md-6">
-            <a class="project-card" href="work/marchandise.html">
-              <video class="project-video" muted loop playsinline preload="none" poster="img/projects/lppm/la-plus-precieuse-des-marchandises.jpg" aria-hidden="true" tabindex="-1">
-                <source src="videos/home/lppm.webm" type="video/webm">
-                <source src="videos/home/lppm.mp4" type="video/mp4">
-              </video>
-              <span class="project-caption">
-                <strong>La Plus Précieuse des Marchandises</strong>
-                <span>Direction technique du film de Michel Hazanavicius : pipeline, outils et train procédural en Geometry Nodes.</span>
-              </span>
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a class="project-card" href="work/clann-arise.html">
-              <video class="project-video" muted loop playsinline preload="none" poster="https://i.ytimg.com/vi/gfJyKq7zhhA/hqdefault.jpg" aria-hidden="true" tabindex="-1">
-                <source src="videos/home/clann.webm" type="video/webm">
-                <source src="videos/home/clann.mp4" type="video/mp4">
-              </video>
-              <span class="project-caption">
-                <strong>Clann | Arise</strong>
-                <span>Visualizer musical : animation, shading et rendu avec Blender et Cycles.</span>
-              </span>
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a class="project-card" href="work/airbus-future-factory.html">
-              <video class="project-video" muted loop playsinline preload="none" poster="img/home/airbus.jpg" aria-hidden="true" tabindex="-1">
-                <source src="videos/home/airbus.webm" type="video/webm">
-                <source src="videos/home/airbus.mp4" type="video/mp4">
-              </video>
-              <span class="project-caption">
-                <strong>Airbus | Inside the future factory</strong>
-                <span>Film de 5 minutes pour Airbus Defence &amp; Space sur les usines de satellites du futur : pipeline, outils, shading et rendu.</span>
-              </span>
-            </a>
-          </div>
+          <p class="mb-0" style="color: var(--muted)">Directeur technique du studio 3.0 à Angoulême, j'interviens aussi en freelance auprès des studios et des entreprises pour débloquer et structurer leurs projets 3D.</p>
         </div>
-        <p class="text-center mt-5">
-          <a href="projets.html" class="btn btn-outline-secondary btn-lg px-4" role="button">Voir tous les projets</a>
-        </p>
+        <ul class="services-list">
+          <li>
+            <span class="num">01</span>
+            <h3>Pipeline de production</h3>
+            <p>Structurer les étapes, les conventions et les échanges de fichiers d'une production Blender.</p>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <h3>Outils et add-ons</h3>
+            <p>Développer les add-ons et extensions qui font gagner du temps à vos équipes.</p>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <h3>Geometry Nodes et LookDev</h3>
+            <p>Mettre en place des setups procéduraux et des matériaux prêts pour la production.</p>
+          </li>
+          <li>
+            <span class="num">04</span>
+            <h3>Audit et accompagnement</h3>
+            <p>Analyser vos workflows, résoudre un blocage technique, encadrer une équipe.</p>
+          </li>
+        </ul>
+        <p class="mt-5 mb-0"><a href="prestations.html" class="link-arrow">Voir le détail des prestations →</a></p>
       </section>
 
-      <!-- 3. Formation : bandeau sombre pleine largeur, comme sur la page formation -->
-      <section id="formation" class="bg-dark text-altlight py-5">
-        <div class="container col-xxl-8 px-4">
-          <h2>Formation Blender sur mesure</h2>
-          <p>Formateur certifié, j'anime des formations personnalisées, en présentiel ou en distanciel,
-            en équipe ou en 1 to 1 : migration depuis Maya ou 3ds Max, shading avec Eevee et Cycles,
-            coaching individuel. Mes formations s'appuient sur mon expérience en production.</p>
-          <figure class="my-4">
-            <blockquote class="blockquote">
-              <p>« Henri a su trouver le juste équilibre entre technicité et pédagogie. »</p>
-            </blockquote>
-            <figcaption class="blockquote-footer text-altlight opacity-75">Benjamin Louis, <cite>Principal Designer, Forvia</cite></figcaption>
-          </figure>
-          <p class="mb-0">
-            <a href="formation.html" class="btn btn-outline-altlight btn-lg px-4" role="button">Voir le détail des formations</a>
-          </p>
-        </div>
-      </section>
-
-      <!-- 4. Publications, références, contact -->
-      <div class="container col-xxl-8 px-4 py-5">
-        <section id="publications">
-          <h2>Auteur chez Eyrolles et Elephorm</h2>
-
-          <h3>Livres publiés chez Eyrolles</h3>
-          <ul>
-            <li>
-              <a href="https://www.eyrolles.com/Informatique/Livre/rendu-3d-avec-blender-et-cycles-9782212142310/"><cite>Rendu 3D avec Blender et Cycles</cite></a>
-               : matériaux réalistes, éclairages avancés et finalisation des rendus avec le moteur Cycles, à travers de nombreux tutoriels pratiques.
-            </li>
-            <li>
-              <a href="https://www.eyrolles.com/Audiovisuel/Livre/la-3d-libre-avec-blender-9782416020803/"><cite>La 3D libre avec Blender</cite></a>
-              , avec Olivier Saraja et Boris Fauret : l'ouvrage de référence en français sur Blender, dont la 9e édition est la plus récente.
-            </li>
-          </ul>
-
-          <h3>Formations vidéo Elephorm</h3>
-          <ul>
-            <li><a href="https://www.elephorm.com/formation/apprendre-blender-27x-les-fondamentaux">Apprendre Blender 2.7x – Les fondamentaux</a></li>
-            <li><a href="https://www.elephorm.com/formation/maitriser-blender-27x-pour-le-motion-design-atelier-creatif">Maîtriser Blender 2.7x pour le Motion Design – Atelier créatif</a></li>
-            <li><a href="https://www.elephorm.com/formation/maitriser-blender-28-atelier-architecture">Atelier Blender : le rendu 3D avec Cycles</a></li>
-          </ul>
-
-          <p>Ces formations enregistrées complètent mes <a href="formation.html">formations sur mesure en direct</a>,
-            qui portent sur les versions actuelles de Blender.</p>
-        </section>
-
-        <section id="references">
-          <h2>Références</h2>
-          <p>J'ai formé et accompagné de très nombreuses entreprises, studios et universités.</p>
-          <div class="logo-strip">
-            <a href="https://www.airbus.com" target="_blank" rel="noopener" title="Airbus"><img src="img/formation/airbus.webp" alt="Logo Airbus" loading="lazy"></a>
-            <a href="https://www.hslu.ch" target="_blank" rel="noopener" title="HSLU - Hochschule Luzern"><img src="img/formation/HSLU.webp" alt="Logo HSLU - Hochschule Luzern" loading="lazy"></a>
-            <img src="img/formation/miju.webp" alt="Logo Miju Games" loading="lazy">
-            <a href="https://www.forvia.com" target="_blank" rel="noopener" title="Forvia"><img src="img/formation/forvia.webp" alt="Logo Forvia" loading="lazy"></a>
-            <a href="https://www.ynov.com" target="_blank" rel="noopener" title="Ynov"><img src="img/formation/ynov.webp" alt="Logo Ynov" loading="lazy"></a>
-            <img src="img/formation/fees.webp" alt="Logo Les Fées Spéciales" loading="lazy">
-            <img src="img/formation/milan.webp" alt="Logo Milan" loading="lazy">
-            <a href="https://www.cyu.fr" target="_blank" rel="noopener" title="CY Cergy Paris Université"><img src="img/formation/cergy.webp" alt="Logo CY Cergy Paris Université" loading="lazy"></a>
+      <!-- Publications (réduites) + appel à l'action final -->
+      <div class="closing">
+        <section class="books" aria-labelledby="publications-titre">
+          <div>
+            <p class="eyebrow">Publications</p>
+            <h2 id="publications-titre" class="h4 mt-2">Auteur chez Eyrolles et Elephorm</h2>
           </div>
+          <ul>
+            <li><a href="https://www.eyrolles.com/Informatique/Livre/rendu-3d-avec-blender-et-cycles-9782212142310/"><cite>Rendu 3D avec Blender et Cycles</cite></a> — Eyrolles</li>
+            <li><a href="https://www.eyrolles.com/Audiovisuel/Livre/la-3d-libre-avec-blender-9782416020803/"><cite>La 3D libre avec Blender</cite></a> — Eyrolles, avec Olivier Saraja et Boris Fauret</li>
+            <li>Trois formations vidéo chez <a href="https://www.elephorm.com/formation/apprendre-blender-27x-les-fondamentaux">Elephorm</a></li>
+          </ul>
         </section>
 
-        <section id="contact">
-          <h2>Me contacter</h2>
-          <p>Un projet, une question ? Écrivez-moi via le formulaire de contact,
-            ou retrouvez-moi sur <a href="https://www.linkedin.com/in/henrihebeisen/">LinkedIn</a> ou <a href="https://mastodon.social/@henrih" rel="me">Mastodon</a>.</p>
-          <p><a href="contact.html" class="btn btn-outline-secondary btn-lg px-4" role="button">Me contacter</a></p>
+        <section class="cta" aria-labelledby="contact-titre">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-titre">Un projet ? <a href="contact.html">Parlons-en.</a></h2>
+          <p>Ou retrouvez-moi sur <a href="https://www.linkedin.com/in/henrihebeisen/">LinkedIn</a> et <a href="https://mastodon.social/@henrih" rel="me">Mastodon</a>.</p>
         </section>
       </div>
     </main>
 
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-secondary">
-            <div class="d-flex align-items-center">
-                <span class="mb-3 mb-md-0 text-body-secondary">© 2026 Henri Hebeisen</span>
-            </div>
-            <ul class="nav justify-content-end align-items-center list-unstyled d-flex">
-                <li class="ms-3 text-body-secondary">SIRET : 80128450600020</li>
-                <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/henrihebeisen/" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5" aria-hidden="true"></i></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="https://mastodon.social/@henrih" rel="me" aria-label="Mastodon"><i class="bi bi-mastodon fs-5" aria-hidden="true"></i></a></li>
-            </ul>
-        </footer>
+    <div class="container-fluid px-4">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-secondary">
+        <div class="d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2026 Henri Hebeisen</span>
+        </div>
+        <ul class="nav justify-content-end align-items-center list-unstyled d-flex">
+          <li class="ms-3 text-body-secondary">SIRET : 80128450600020</li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/henrihebeisen/" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5" aria-hidden="true"></i></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://mastodon.social/@henrih" rel="me" aria-label="Mastodon"><i class="bi bi-mastodon fs-5" aria-hidden="true"></i></a></li>
+        </ul>
+      </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            ScrollReveal().reveal('.reveal-fast', { duration: 1500 });
-            ScrollReveal().reveal('.reveal-medium', { duration: 2500 });
-            ScrollReveal().reveal('.reveal-slow', { duration: 3500 });
-        });
-    </script>
-    <script>
-        (function () {
-            var v = document.querySelector('.hero-video');
-            // Visiteurs ayant demandé de réduire les animations : on n'autoplay pas la vidéo
-            if (v && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                v.removeAttribute('autoplay');
-                v.pause();
-            }
 
-            // Menu collé en haut, toujours transparent : texte blanc sur la vidéo, sombre une fois le hero dépassé
-            var header = document.querySelector('.site-header');
-            var hero = document.querySelector('.hero');
-            if (!header || !hero) return;
-            var ticking = false;
-            function update() {
-                var limit = hero.offsetHeight - header.offsetHeight;
-                header.classList.toggle('is-past-hero', window.scrollY >= limit);
-                ticking = false;
-            }
-            function onScroll() {
-                if (!ticking) { ticking = true; requestAnimationFrame(update); }
-            }
-            window.addEventListener('scroll', onScroll, { passive: true });
-            window.addEventListener('resize', onScroll);
-            update();
-        })();
-    </script>
     <script>
-        // Vignettes de projets : vidéo au survol (ordinateur) ou au défilement (écran tactile)
-        (function () {
-            var vids = document.querySelectorAll('.project-video');
-            if (!vids.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-            function play(v) { var r = v.play(); if (r && r.catch) r.catch(function () {}); }
-            if (window.matchMedia('(hover: none)').matches && 'IntersectionObserver' in window) {
-                var io = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (e) { e.isIntersecting ? play(e.target) : e.target.pause(); });
-                }, { threshold: 0.6 });
-                vids.forEach(function (v) { io.observe(v); });
-            } else {
-                vids.forEach(function (v) {
-                    var card = v.closest('.project-card');
-                    card.addEventListener('mouseenter', function () { play(v); });
-                    card.addEventListener('mouseleave', function () { v.pause(); });
-                    card.addEventListener('focusin', function () { play(v); });
-                    card.addEventListener('focusout', function () { v.pause(); });
-                });
-            }
-        })();
+      (function () {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Hero : pas d'autoplay si l'utilisateur limite les animations
+        var hv = document.querySelector('.hero-video');
+        if (hv && reduce) { hv.removeAttribute('autoplay'); hv.pause(); }
+
+        // Menu : style compact une fois le hero dépassé
+        var header = document.querySelector('.site-header');
+        var hero = document.querySelector('.hero');
+        var ticking = false;
+        function update() {
+          header.classList.toggle('is-past-hero', window.scrollY >= hero.offsetHeight - header.offsetHeight);
+          ticking = false;
+        }
+        window.addEventListener('scroll', function () {
+          if (!ticking) { ticking = true; requestAnimationFrame(update); }
+        }, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+
+        // Vignettes : la vidéo n'apparaît qu'une fois qu'elle joue vraiment
+        // (sinon l'image fixe reste visible, même si le fichier vidéo n'existe pas encore)
+        if (reduce) return;
+        var tiles = document.querySelectorAll('.tile');
+        function play(tile) {
+          var v = tile.querySelector('video');
+          if (!v) return;
+          var p = v.play();
+          if (p && p.then) p.then(function () { tile.classList.add('is-playing'); }).catch(function () {});
+        }
+        function stop(tile) {
+          var v = tile.querySelector('video');
+          if (!v) return;
+          v.pause();
+          tile.classList.remove('is-playing');
+        }
+        if (window.matchMedia('(hover: none)').matches && 'IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { e.isIntersecting ? play(e.target) : stop(e.target); });
+          }, { threshold: 0.6 });
+          tiles.forEach(function (t) { io.observe(t); });
+        } else {
+          tiles.forEach(function (t) {
+            t.addEventListener('mouseenter', function () { play(t); });
+            t.addEventListener('mouseleave', function () { stop(t); });
+            t.addEventListener('focusin', function () { play(t); });
+            t.addEventListener('focusout', function () { stop(t); });
+          });
+        }
+      })();
     </script>
   </body>
 </html>
