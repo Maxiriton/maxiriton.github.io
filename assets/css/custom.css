@@ -224,3 +224,100 @@ img {
 @media (prefers-reduced-motion: reduce) {
     .hero-scroll { animation: none; }
 }
+
+
+/* ==========================================================
+   Page d'accueil : vignettes de projets
+   ========================================================== */
+.project-card {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #2A2A21;   /* visible tant que l'image n'est pas chargée */
+    color: #fff;
+    text-decoration: none;
+}
+
+.project-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.project-card:hover .project-video,
+.project-card:focus-visible .project-video {
+    transform: scale(1.04);
+}
+
+.project-card:focus-visible {
+    outline: 3px solid #E2DAC9;
+    outline-offset: 3px;
+}
+
+.project-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+    padding: 2.5rem 1.25rem 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));
+    pointer-events: none;
+}
+
+.project-caption strong {
+    font-size: 1.15rem;
+}
+
+.project-caption span {
+    font-size: .9rem;
+    opacity: .9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-video { transition: none; }
+}
+
+
+/* ==========================================================
+   Page d'accueil : bandeau de logos de références
+   Une seule ligne sur ordinateur et tablette, 2 lignes de 4 sur petit écran
+   ========================================================== */
+.logo-strip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    margin: 1.5rem 0;
+}
+
+.logo-strip > * {
+    flex: 0 0 calc(25% - .75rem);
+    min-width: 0;
+}
+
+.logo-strip img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 56px;
+    object-fit: contain;
+}
+
+@media (min-width: 768px) {
+    .logo-strip {
+        flex-wrap: nowrap;
+    }
+
+    .logo-strip > * {
+        flex: 1 1 0;
+    }
+}

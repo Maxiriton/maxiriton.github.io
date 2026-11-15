@@ -12,12 +12,12 @@
     <meta property="og:title" content="Henri Hebeisen – Consultant et formateur Blender freelance">
     <meta property="og:description" content="Formations Blender sur mesure et accompagnement technique de projets 3D pour entreprises et studios.">
     <meta property="og:url" content="https://www.henri-hebeisen.com/">
-    <meta property="og:image" content="https://www.henri-hebeisen.com/img/og-accueil.jpg"> <!-- à créer : 1200x630 px -->
+    <meta property="og:image" content="https://www.henri-hebeisen.com/img/og-accueil.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -82,17 +82,17 @@
         <a href="#intro" class="hero-scroll" aria-label="Voir la suite de la page"><i class="bi bi-chevron-down"></i></a>
       </section>
 
-      <div id="intro" class="container col-xxl-8 px-4 py-5">
+      <!-- 1. Expertise -->
+      <div id="intro" class="container col-xxl-8 px-4 pt-5">
         <section class="row flex-lg-row align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <img src="img/rocket.jpg" class="d-block mx-lg-auto img-fluid reveal-medium" alt="Rocket Project, an image extracted " width="700" height="500" loading="lazy">
+            <img src="img/rocket.jpg" class="d-block mx-lg-auto img-fluid reveal-medium" alt="Projet Rocket : rendu 3D réalisé avec Blender" width="700" height="500" loading="lazy">
           </div>
           <div class="col-lg-6 reveal-slow ">
             <p>Utilisateur de Blender depuis une quinzaine d'années, j'accompagne entreprises, studios
               et indépendants dans la réussite de leurs projets 3D grâce à mon expertise technique.</p>
             <p>
-              <a href="formation.html">Découvrir mes formations Blender</a> ·
-              <a href="mailto:henri.hebeisen@gmail.com">Me contacter</a>
+              <a href="contact.html" class="btn btn-outline-secondary btn-lg px-4" role="button">Me contacter</a>
             </p>
           </div>
         </section>
@@ -101,17 +101,90 @@
           <h2>Consulting Blender et direction technique</h2>
           <p>Je suis directeur technique du studio 3.0 à Angoulême et consultant freelance.
             J'interviens pour structurer un pipeline de production, résoudre un blocage technique,
-            former et encadrer une équipe, auditer vos workflows... Mais aussi developpement d'addons et d'extensions, setup de Geometry Nodes ou mise en place de LookDev.</p>
+            former et encadrer une équipe, auditer vos workflows... Mais aussi développement d'addons et d'extensions, setup de Geometry Nodes ou mise en place de LookDev.</p>
         </section>
+      </div>
 
-        <section>
+      <!-- 2. Exemples de projets (vidéo au survol sur ordinateur, au défilement sur mobile) -->
+      <section id="projets" class="container px-4 py-5">
+        <h2 class="text-center mb-2">Quelques projets</h2>
+        <p class="text-center mb-5">Un aperçu de ce que je réalise en production, et de ce que je transmets ensuite en formation.</p>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <a class="project-card" href="work/tudor.html">
+              <video class="project-video" muted loop playsinline preload="none" poster="img/projects/tudor/front-34.jpg" aria-hidden="true" tabindex="-1">
+                <source src="videos/home/tudor.webm" type="video/webm">
+                <source src="videos/home/tudor.mp4" type="video/mp4">
+              </video>
+              <span class="project-caption">
+                <strong>Tudor | Heritage Ranger</strong>
+                <span>Remodélisation fidèle d'une montre de luxe, du modèle au rig d'animation.</span>
+              </span>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a class="project-card" href="work/marchandise.html">
+              <video class="project-video" muted loop playsinline preload="none" poster="img/projects/lppm/la-plus-precieuse-des-marchandises.jpg" aria-hidden="true" tabindex="-1">
+                <source src="videos/home/lppm.webm" type="video/webm">
+                <source src="videos/home/lppm.mp4" type="video/mp4">
+              </video>
+              <span class="project-caption">
+                <strong>La Plus Précieuse des Marchandises</strong>
+                <span>Direction technique du film de Michel Hazanavicius : pipeline, outils et train procédural en Geometry Nodes.</span>
+              </span>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a class="project-card" href="work/clann-arise.html">
+              <video class="project-video" muted loop playsinline preload="none" poster="https://i.ytimg.com/vi/gfJyKq7zhhA/hqdefault.jpg" aria-hidden="true" tabindex="-1">
+                <source src="videos/home/clann.webm" type="video/webm">
+                <source src="videos/home/clann.mp4" type="video/mp4">
+              </video>
+              <span class="project-caption">
+                <strong>Clann | Arise</strong>
+                <span>Visualizer musical : animation, shading et rendu avec Blender et Cycles.</span>
+              </span>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a class="project-card" href="work/airbus-future-factory.html">
+              <video class="project-video" muted loop playsinline preload="none" poster="img/home/airbus.jpg" aria-hidden="true" tabindex="-1">
+                <source src="videos/home/airbus.webm" type="video/webm">
+                <source src="videos/home/airbus.mp4" type="video/mp4">
+              </video>
+              <span class="project-caption">
+                <strong>Airbus | Inside the future factory</strong>
+                <span>Film de 5 minutes pour Airbus Defence &amp; Space sur les usines de satellites du futur : pipeline, outils, shading et rendu.</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <p class="text-center mt-5">
+          <a href="projets.html" class="btn btn-outline-secondary btn-lg px-4" role="button">Voir tous les projets</a>
+        </p>
+      </section>
+
+      <!-- 3. Formation : bandeau sombre pleine largeur, comme sur la page formation -->
+      <section id="formation" class="bg-dark text-altlight py-5">
+        <div class="container col-xxl-8 px-4">
           <h2>Formation Blender sur mesure</h2>
           <p>Formateur certifié, j'anime des formations personnalisées, en présentiel ou en distanciel,
             en équipe ou en 1 to 1 : migration depuis Maya ou 3ds Max, shading avec Eevee et Cycles,
             coaching individuel. Mes formations s'appuient sur mon expérience en production.</p>
-          <p><a href="formation.html">Voir le détail des formations</a></p>
-        </section>
+          <figure class="my-4">
+            <blockquote class="blockquote">
+              <p>« Henri a su trouver le juste équilibre entre technicité et pédagogie. »</p>
+            </blockquote>
+            <figcaption class="blockquote-footer text-altlight opacity-75">Benjamin Louis, <cite>Principal Designer, Forvia</cite></figcaption>
+          </figure>
+          <p class="mb-0">
+            <a href="formation.html" class="btn btn-outline-altlight btn-lg px-4" role="button">Voir le détail des formations</a>
+          </p>
+        </div>
+      </section>
 
+      <!-- 4. Publications, références, contact -->
+      <div class="container col-xxl-8 px-4 py-5">
         <section id="publications">
           <h2>Auteur chez Eyrolles et Elephorm</h2>
 
@@ -138,18 +211,26 @@
             qui portent sur les versions actuelles de Blender.</p>
         </section>
 
-
-        <section>
+        <section id="references">
           <h2>Références</h2>
-          <p>J'ai formé et accompagné de très nombreuses entreprises, studios et universités comme par exemple Airbus, Forvia Miju Games ou Les Fées Spéciales.
-            <a href="projets.html">Voir mes projets</a>.</p>
+          <p>J'ai formé et accompagné de très nombreuses entreprises, studios et universités.</p>
+          <div class="logo-strip">
+            <a href="https://www.airbus.com" target="_blank" rel="noopener" title="Airbus"><img src="img/formation/airbus.webp" alt="Logo Airbus" loading="lazy"></a>
+            <a href="https://www.hslu.ch" target="_blank" rel="noopener" title="HSLU - Hochschule Luzern"><img src="img/formation/HSLU.webp" alt="Logo HSLU - Hochschule Luzern" loading="lazy"></a>
+            <img src="img/formation/miju.webp" alt="Logo Miju Games" loading="lazy">
+            <a href="https://www.forvia.com" target="_blank" rel="noopener" title="Forvia"><img src="img/formation/forvia.webp" alt="Logo Forvia" loading="lazy"></a>
+            <a href="https://www.ynov.com" target="_blank" rel="noopener" title="Ynov"><img src="img/formation/ynov.webp" alt="Logo Ynov" loading="lazy"></a>
+            <img src="img/formation/fees.webp" alt="Logo Les Fées Spéciales" loading="lazy">
+            <img src="img/formation/milan.webp" alt="Logo Milan" loading="lazy">
+            <a href="https://www.cyu.fr" target="_blank" rel="noopener" title="CY Cergy Paris Université"><img src="img/formation/cergy.webp" alt="Logo CY Cergy Paris Université" loading="lazy"></a>
+          </div>
         </section>
 
-        <section>
+        <section id="contact">
           <h2>Me contacter</h2>
-          <p>Un projet, une question ? Écrivez-moi à
-            <a href="mailto:henri.hebeisen@gmail.com">henri.hebeisen@gmail.com</a>
+          <p>Un projet, une question ? Écrivez-moi via le formulaire de contact,
             ou retrouvez-moi sur <a href="https://www.linkedin.com/in/henrihebeisen/">LinkedIn</a> ou <a href="https://mastodon.social/@henrih" rel="me">Mastodon</a>.</p>
+          <p><a href="contact.html" class="btn btn-outline-secondary btn-lg px-4" role="button">Me contacter</a></p>
         </section>
       </div>
     </main>
@@ -157,20 +238,22 @@
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-secondary">
             <div class="d-flex align-items-center">
-                <span class="mb-3 text-body-secondary">© 2026 Henri Hebeisen</span>
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2026 Henri Hebeisen</span>
             </div>
-            <ul class="nav justify-content-end list-unstyled d-flex">
+            <ul class="nav justify-content-end align-items-center list-unstyled d-flex">
                 <li class="ms-3 text-body-secondary">SIRET : 80128450600020</li>
-                <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Instagram"><svg class="bi" width="24" height="24" aria-hidden="true"><use xlink:href="#instagram"></use></svg></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Facebook"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-            </ul> 
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/henrihebeisen/" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5" aria-hidden="true"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://mastodon.social/@henrih" rel="me" aria-label="Mastodon"><i class="bi bi-mastodon fs-5" aria-hidden="true"></i></a></li>
+            </ul>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
-        ScrollReveal().reveal('.reveal-fast', { duration: 1500 });
-        ScrollReveal().reveal('.reveal-medium', { duration: 2500 });
-        ScrollReveal().reveal('.reveal-slow', { duration: 3500 });
+        document.addEventListener('DOMContentLoaded', function () {
+            ScrollReveal().reveal('.reveal-fast', { duration: 1500 });
+            ScrollReveal().reveal('.reveal-medium', { duration: 2500 });
+            ScrollReveal().reveal('.reveal-slow', { duration: 3500 });
+        });
     </script>
     <script>
         (function () {
@@ -197,6 +280,28 @@
             window.addEventListener('scroll', onScroll, { passive: true });
             window.addEventListener('resize', onScroll);
             update();
+        })();
+    </script>
+    <script>
+        // Vignettes de projets : vidéo au survol (ordinateur) ou au défilement (écran tactile)
+        (function () {
+            var vids = document.querySelectorAll('.project-video');
+            if (!vids.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            function play(v) { var r = v.play(); if (r && r.catch) r.catch(function () {}); }
+            if (window.matchMedia('(hover: none)').matches && 'IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) { e.isIntersecting ? play(e.target) : e.target.pause(); });
+                }, { threshold: 0.6 });
+                vids.forEach(function (v) { io.observe(v); });
+            } else {
+                vids.forEach(function (v) {
+                    var card = v.closest('.project-card');
+                    card.addEventListener('mouseenter', function () { play(v); });
+                    card.addEventListener('mouseleave', function () { v.pause(); });
+                    card.addEventListener('focusin', function () { play(v); });
+                    card.addEventListener('focusout', function () { v.pause(); });
+                });
+            }
         })();
     </script>
   </body>
