@@ -69,6 +69,12 @@ img {
     text-shadow: 0 2px 24px rgba(0, 0, 0, .45);
 }
 
+/* menu et pied de page : même largeur et mêmes marges que le contenu, sur toutes les pages */
+.site-gutter {
+    padding-left: clamp(1.25rem, 5vw, 5rem);
+    padding-right: clamp(1.25rem, 5vw, 5rem);
+}
+
 /* menu transparent posé au-dessus de la vidéo (il défile avec la page) */
 .site-header {
     position: fixed;           /* reste collé en haut pendant le défilement */
