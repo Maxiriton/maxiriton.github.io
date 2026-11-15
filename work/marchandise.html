@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>La Plus Précieuse des Marchandises – Direction technique 3D | Henri Hebeisen</title>
     <meta name="description" content="Direction technique du film de Michel Hazanavicius au studio 3.0 à Angoulême : pipeline Blender, outils et train procédural en Geometry Nodes.">
+    <link rel="canonical" href="https://www.henri-hebeisen.com/work/marchandise.html">
     <meta property="og:type" content="article">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Henri Hebeisen">
@@ -15,20 +16,19 @@
     <meta property="og:image" content="https://www.henri-hebeisen.com/img/projects/lppm/la-plus-precieuse-des-marchandises.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="canonical" href="https://www.henri-hebeisen.com/work/marchandise.html">
     <link href="../assets/css/main.css" rel="stylesheet">
-    <link href="../assets/css/custom.css?v=2026-11-15h" rel="stylesheet">
+    <link href="../assets/css/custom.css?v=2026-11-15i" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+    <script src="../assets/js/reveal.js" defer></script>
 </head>
 
 <body class="bg-altlight">
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-            <a href="https://www.henri-hebeisen.com"
+            <a href="../index.html"
                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                 <span class="fs-4">Henri Hebeisen</span>
             </a>
-
           <ul class="nav nav-pills">
             <li class="nav-item"><a href="../projets.html" class="nav-link nav-link-ltr">Projets</a></li>
             <li class="nav-item"><a href="../formation.html" class="nav-link nav-link-ltr">Formation</a></li>
@@ -37,89 +37,127 @@
           </ul>
         </header>
     </div>
-    <div class="container">
-        <div class="px-4 py-5 my-5 text-center reveal-fast">
-            <h1 class="display-4 fw-bold text-body-emphasis">La plus précieuse des Marchandises</h1>
-            <h2 class="display-7 fw-bold text-body-emphasis">Directeur Technique - Pipeline - Outils - Supervision 3D</h2>
-            <div class="col-lg-8 mx-auto my-4">
-                <p class="lead mb-4">Entre 2021 et 2024, j'ai eu la chance de participer à la fabrication du film La Plus Précieuse des Marchandises de Michel Hazanavicius en tant que Directeur Technique du studio 3.0 Studio à Angoulême.</p>
-            </div>
-            
-            <div class="row reveal-medium">
-                <div class="col-lg-12 mx-auto my-4">
-                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="../img/projects/lppm/la-plus-precieuse-des-marchandises.jpg" class="d-block w-100" alt="A solitary person wearing a heavy coat walks away from the viewer along snow-covered railroad tracks toward a distant train whose two bright headlights pierce falling snow. Tall dark trees flank the tracks and visibility is reduced by snow and mist. No legible text in the image. The scene feels cold, lonely, and tense, evoking quiet isolation and anticipation. Image extracted from La Plus précieuse des Marchandises by Michel Hazanavicius.">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../img/projects/lppm/la-plus-precieuse-des-marchandises-2.jpg" class="d-block w-100" alt="A misty winter forest scene with tall dark trees in shades of grey and blue. In the foreground, rocks and dry grass peek through patches of snow on uneven ground. The moody atmosphere creates a sense of mystery and isolation in this cold wilderness setting, with layers of trees fading into the foggy background.">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../img/projects/lppm/la-plus-precieuse-des-marchandises-3.jpg" class="d-block w-100" alt="Sunlit forest clearing surrounded by tall dark trees in winter. Golden light filters through branches in the background, creating a dramatic contrast with the shadowy foreground. The scene is atmospheric and moody, with rays of sunlight piercing through the misty woodland, suggesting both hope and solitude.">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../img/projects/lppm/la-plus-precieuse-des-marchandises-4.jpg" class="d-block w-100" alt="Dark, atmospheric winter forest scene at dusk. Several figures in heavy winter clothing huddle together among bare trees and undergrowth. Snow covers the ground and fog filters through the trees, creating an eerie, somber mood. The muted colors and dim lighting emphasize the sense of isolation and vulnerability in the cold wilderness setting.">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../img/projects/lppm/la-plus-precieuse-des-marchandises-5.jpg" class="d-block w-100" alt="A small group of people in heavy winter clothing clustered among bare trees in a foggy, snow-covered forest; faces are mostly obscured or turned away; low light and mist create a somber, isolated, and tense atmosphere; no legible text visible.">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="row reveal-slow">
-                <p class="lead my-4">J'ai eu plusieurs rôles sur cette production. Le premier était la mise en place complète du pipeline et des outils pour les artistes.</p>
-            </div>
-            <div class="row text-start">
-                <div class="col-lg-6 reveal-medium">
-                    <ol class="list-group list-group-flush list-group-numbered h4  bg-transparent ms-3">
-                        <li class="list-group-item py-3 bg-transparent">Mise en place du pipeline de production, centré autour de l'API Zou et du logiciel de suivi de production Kitsu. </li>
-                        <li class="list-group-item py-3 bg-transparent">Développement d'un launcher personnalisé pour la récupération et la publication des fichiers de travail. L'idée derrière ce launcher était de simplifier au maximum l'étape de <em>Publish</em>, si souvent source d'erreurs pour les artistes. L'outil permet de publier en une seule étape son fichier de travail sur les serveurs du studio, de poster un commentaire et un statut sur Kitsu ainsi qu'une nouvelle preview si nécessaire.</li>
-                        <li class="list-group-item py-3 bg-transparent">Développement d'un système d'import/export entre Blender et TVPaint avec <a href="https://www.rashid.fr/">Rashid Ghassempouri</a>. L'animation clé étant réalisée sous TVPaint et l'assistanat sous Blender, nous avons développé un système d'exports des calques TVPaint et d'import sur Blender en conservant les calques et les images clés. </li>
-                        <li class="list-group-item py-3 bg-transparent">Développement de nombreux <em>addons</em> Blender pour résoudre des problématiques de workflow autour du Grease Pencil. Ces petits outils étaient là pour simplifier le travail des artistes et leur permettre d'améliorer leur productivité sur Blender.  </li>
-                        <li class="list-group-item py-3 bg-transparent">Tracking automatique des changements pour le département <em>editorial</em>. L'outil permet de donner au monteur du film une liste des fichiers changés pour lui permettre de les intégrer si necessaire au montage. </li>
-                        <li class="list-group-item py-3 bg-transparent">Synchronisation automatique des fichiers entre les différents sites de production : La production se déroulant entre plusieurs studios, notamment pour le <em>Compositing</em>. J'ai développé un outil permettant de récupérer automatiquement toutes les dépendances d'un fichier de compo (fichiers d'anim, de colo, décors...) pour les rapatrier en local et gagner en efficacité. </li>
-                    </ol>
-                </div>
-                <div class="col-lg-6 reveal-slow">
-                    <img src="../img/projects/lppm/train_side.JPG" class="img-fluid" alt="Train procédural du film, vu de profil dans Blender">
-                </div>
-                <p class="lead my-4">J'ai également supervisé la partie 3D du film, en veillant à la bonne application des processus et en aidant les artistes à résoudre les problèmes techniques rencontrés.</p>
-            </div>
-        </div>
-    </div>
 
+    <main>
+        <!-- Titre -->
+        <section class="page-intro page-intro--compact" aria-labelledby="titre" data-reveal-group>
+            <p class="eyebrow"><a href="../projets.html" class="back-link">← Projets</a> · Long métrage d'animation · 2021–2024</p>
+            <h1 id="titre">La Plus Précieuse des Marchandises</h1>
+        </section>
 
-    <div class="bg-dark text-secondary px-4 text-center">
-        <div class="container-fluid py-5 reveal-medium">
-            <h2 class="display-5 fw-bold text-altlight">Train Procédural avec <em>Geometry Nodes</em></h2>
-            <div class="container">
-                <div class="row text-start mt-5 g-3 reveal-fast">
-                    <p class="lead text-altlight">Les véhicules du film ont tous été modélisés avec Blender pour faciliter le travail d'intégration de l'assistanat. Cependant le Train a nécessité un travail particulier car il est présent dans de nombreux plans et son apparence peut changer en fonction du message que le réalisateur souhaitait faire passer : tantôt imposant, tantôt animal. En fonction de la taille occupée dans l'image, le nombre de wagons, la taille, la hauteur ou l'espacement entre les wagons pouvait changer.</p>
-                    <p class="lead text-altlight">La solution <em>Geometry Nodes</em> est vite apparue comme idéale, tout en résolvant un autre problème technique. Avec le <em>rig</em> traditionnel de Blender, à base d'<em>armatures</em>, donnait de très mauvaises performances dès que le nombre de wagons augmentait. En gérant les contraintes et les mouvements directement avec <em>Geometry Nodes</em>, le <em>framerate</em> de la scène restait bien meilleur.</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 my-4">
-                        <video src="../videos/lppm_train.mp4" class="w-100" autoplay muted loop playsinline preload="metadata" aria-label="Démonstration du train procédural en Geometry Nodes"></video>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 my-4">
-                        <img src="../img/projects/lppm/train_nodes.JPG" class="img-fluid"  alt="Complex node-based workflow diagram showing a train rigging system in Blender Geometry Nodes. Green connection lines link multiple black rectangular nodes in a tree-like structure. The nodes control parameters like wagon spacing, train length, and rail path following. The interface uses a dark gray background with cyan-colored connection paths, typical of Blender's node editor interface.">
-                    </div>
-                </div>
-            </div>
+        <!-- Image principale, bord à bord -->
+        <figure class="project-cover">
+            <img src="../img/projects/lppm/la-plus-precieuse-des-marchandises.jpg"
+                alt="Une silhouette en manteau marche sur une voie ferrée enneigée vers un train dont les phares percent la neige, entre de grands arbres sombres. Image extraite du film.">
+        </figure>
+
+        <!-- Fiche du projet + introduction -->
+        <section class="project-summary" aria-label="Le projet">
+            <dl class="project-meta" data-reveal-group>
+                <div><dt>Film</dt><dd>Michel Hazanavicius</dd></div>
+                <div><dt>Studio</dt><dd>3.0, Angoulême</dd></div>
+                <div><dt>Rôle</dt><dd>Directeur technique</dd></div>
+                <div><dt>Outils</dt><dd>Blender, Kitsu, TVPaint, Python</dd></div>
+            </dl>
+            <p class="project-lead" data-reveal>De 2021 à 2024, j'ai été directeur technique du studio 3.0 sur le film de Michel Hazanavicius :
+                conception du pipeline, développement des outils des artistes et supervision de toute la partie 3D.</p>
+        </section>
+
+        <!-- Galerie : les images d'abord -->
+        <div class="project-gallery" data-reveal-group>
+            <img class="is-wide" src="../img/projects/lppm/la-plus-precieuse-des-marchandises-2.jpg" loading="lazy"
+                alt="Dans une forêt enneigée, une femme penchée vers le sol s'approche d'un bébé emmailloté posé dans les herbes sèches.">
+            <img src="../img/projects/lppm/la-plus-precieuse-des-marchandises-3.jpg" loading="lazy"
+                alt="Dans la lumière dorée du soir, un homme accroupi près d'une cabane en bois tient un bébé dans ses bras, un chien couché à ses pieds.">
+            <img src="../img/projects/lppm/la-plus-precieuse-des-marchandises-4.jpg" loading="lazy"
+                alt="Dans un sous-bois sombre et enneigé, un homme en manteau et chapka est accroupi à côté d'un jeune enfant au foulard rouge.">
+            <img class="is-wide" src="../img/projects/lppm/la-plus-precieuse-des-marchandises-5.jpg" loading="lazy"
+                alt="Une femme portant un bébé marche seule dans une forêt de bouleaux enneigée, striée par les ombres des arbres.">
         </div>
-    </div>
+
+        <!-- Pipeline et outils -->
+        <section class="services" aria-labelledby="pipeline-titre">
+            <div class="services-intro" data-reveal>
+                <div>
+                    <p class="eyebrow">Pipeline et outils</p>
+                    <h2 id="pipeline-titre">Simplifier le quotidien des artistes</h2>
+                </div>
+                <p class="mb-0" style="color: var(--muted)">Mon premier rôle : mettre en place l'ensemble du pipeline et des outils.
+                    J'ai ensuite supervisé la 3D du film, en veillant au respect des process et en aidant les artistes
+                    à résoudre leurs problèmes techniques.</p>
+            </div>
+            <div class="service-detail service-detail--3" data-reveal-group>
+                <article>
+                    <span class="num">01</span>
+                    <h3>Pipeline Kitsu</h3>
+                    <p>Un pipeline de production construit autour de Kitsu, le logiciel de suivi de production, et de son API Zou.</p>
+                </article>
+                <article>
+                    <span class="num">02</span>
+                    <h3>Publier en un clic</h3>
+                    <p>Un launcher maison pour récupérer et publier les fichiers de travail. En une seule étape : envoi sur les serveurs,
+                        commentaire, statut et preview sur Kitsu. Fini les erreurs de <em>publish</em>.</p>
+                </article>
+                <article>
+                    <span class="num">03</span>
+                    <h3>Passerelle TVPaint – Blender</h3>
+                    <p>Avec <a href="https://www.rashid.fr/">Rashid Ghassempouri</a> : l'animation clé, faite sous TVPaint,
+                        arrive dans Blender pour l'assistanat avec ses calques et ses images clés.</p>
+                </article>
+                <article>
+                    <span class="num">04</span>
+                    <h3>Add-ons Grease Pencil</h3>
+                    <p>De nombreux petits outils pour lever les frictions du workflow Grease Pencil et gagner en productivité.</p>
+                </article>
+                <article>
+                    <span class="num">05</span>
+                    <h3>Suivi pour le montage</h3>
+                    <p>Le monteur reçoit automatiquement la liste des fichiers modifiés, pour les intégrer au montage si besoin.</p>
+                </article>
+                <article>
+                    <span class="num">06</span>
+                    <h3>Synchronisation multi-sites</h3>
+                    <p>La production s'étalait sur plusieurs studios : un outil rapatrie automatiquement toutes les dépendances
+                        d'un plan de compositing (animation, couleur, décors).</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Focus : le train procédural -->
+        <section class="project-feature" aria-labelledby="train-titre">
+            <div class="project-feature-text" data-reveal-group>
+                <p class="eyebrow">Focus</p>
+                <h2 id="train-titre">Un train procédural en Geometry Nodes</h2>
+                <p>Le train apparaît dans de nombreux plans, et son allure change selon ce que le réalisateur veut raconter :
+                    tantôt imposant, tantôt animal. Nombre de wagons, taille, hauteur, espacement : tout devait rester réglable plan par plan.</p>
+                <p>Geometry Nodes s'est imposé, et a réglé un autre problème au passage : avec un rig classique à base d'armatures,
+                    les performances s'effondraient dès que les wagons se multipliaient. En gérant contraintes et mouvements
+                    directement dans les nodes, la scène restait fluide.</p>
+            </div>
+            <figure class="project-feature-media" data-reveal>
+                <img src="../img/projects/lppm/train_side.JPG" loading="lazy" alt="Le train procédural du film vu de profil dans Blender">
+            </figure>
+        </section>
+
+        <div class="project-media" data-reveal-group>
+            <video src="../videos/lppm_train.mp4" autoplay muted loop playsinline preload="metadata"
+                aria-label="Démonstration du train procédural : wagons, espacement et mouvement réglés en Geometry Nodes"></video>
+            <img src="../img/projects/lppm/train_nodes.JPG" loading="lazy"
+                alt="Arbre de nodes Geometry Nodes dans Blender qui pilote le train : espacement des wagons, longueur du train, suivi des rails.">
+        </div>
+
+        <!-- Projet suivant -->
+        <nav class="next-project" aria-label="Projet suivant">
+            <a class="case" href="tudor.html">
+                <img src="../img/projects/tudor.jpg" alt="" loading="lazy">
+                <span class="case-caption">
+                    <span class="eyebrow">Projet suivant</span>
+                    <strong>Tudor — Heritage Ranger</strong>
+                </span>
+                <span class="case-more" aria-hidden="true">Voir le projet →</span>
+            </a>
+        </nav>
+    </main>
 
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-secondary">
@@ -133,24 +171,6 @@
             </ul>
         </footer>
     </div>
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-            </script>
-        <script>
-        document.addEventListener('DOMContentLoaded', function () {
-                ScrollReveal().reveal('.reveal-fast', {
-                    duration: 1500
-                });
-                ScrollReveal().reveal('.reveal-medium', {
-                    duration: 2500
-                });
-                ScrollReveal().reveal('.reveal-slow', {
-                    duration: 3500
-                });
-        });
-        </script>
 </body>
 
 </html>

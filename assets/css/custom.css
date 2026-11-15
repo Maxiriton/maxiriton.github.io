@@ -811,6 +811,123 @@ img {
     .case img, .case-more { transition: none; }
 }
 
+
+/* ==========================================================
+   Pages de détail des projets (work/*.html)
+   ========================================================== */
+.back-link { color: inherit; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+
+/* image principale bord à bord */
+.project-cover { margin: 0; padding: 0 var(--gap); }
+.project-cover img {
+    display: block;
+    width: 100%;
+    height: clamp(300px, 62vw, 82vh);
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* fiche technique + paragraphe d'introduction */
+.project-summary {
+    display: grid;
+    gap: 2.5rem;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 5vw, 5rem);
+    color: var(--ink-soft);
+}
+@media (min-width: 992px) {
+    .project-summary { grid-template-columns: 2fr 3fr; column-gap: 5rem; align-items: start; }
+}
+.project-meta { display: grid; gap: 0; margin: 0; }
+.project-meta > div {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 1rem;
+    padding: .75rem 0;
+    border-top: 1px solid rgba(42, 42, 33, .2);
+}
+.project-meta > div:last-child { border-bottom: 1px solid rgba(42, 42, 33, .2); }
+.project-meta dt {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: .75rem;
+    font-weight: 400;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    opacity: .7;
+    padding-top: .2rem;
+}
+.project-meta dd { margin: 0; }
+.project-lead {
+    font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+    line-height: 1.35;
+    margin: 0;
+}
+
+/* galerie : une large, deux côte à côte, une large */
+.project-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+    padding: 0 var(--gap) clamp(3rem, 6vw, 5rem);
+}
+@media (min-width: 768px) {
+    .project-gallery { grid-template-columns: 1fr 1fr; }
+    .project-gallery .is-wide { grid-column: 1 / -1; }
+}
+.project-gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+}
+@media (min-width: 768px) {
+    .project-gallery .is-wide { aspect-ratio: 2.35 / 1; }
+}
+
+.service-detail a { color: var(--paper); }
+.service-detail a:hover { color: #fff; }
+
+/* focus technique : texte + image verticale */
+.project-feature {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 5rem) clamp(2rem, 4vw, 3rem);
+    color: var(--ink-soft);
+}
+@media (min-width: 992px) { .project-feature { grid-template-columns: 3fr 2fr; column-gap: 5rem; } }
+.project-feature-text h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.05;
+    margin: .4rem 0 1.5rem;
+}
+.project-feature-text p:not(.eyebrow) { font-size: 1.1rem; max-width: 38rem; }
+.project-feature-media { margin: 0; justify-self: center; }
+.project-feature-media img { max-height: 70vh; width: auto; max-width: 100%; }
+
+/* vidéo et captures pleine largeur */
+.project-media {
+    display: grid;
+    gap: var(--gap);
+    padding: 0 var(--gap) var(--gap);
+}
+.project-media video,
+.project-media img {
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    background: var(--ink);
+}
+
+/* projet suivant : même bande que la page Projets */
+.next-project { padding: clamp(3rem, 6vw, 5rem) var(--gap) 0; }
+
 /* Menu à 4 entrées : resserré sur petit écran pour tenir sur une ligne */
 @media (max-width: 575.98px) {
     .nav-pills .nav-link {
