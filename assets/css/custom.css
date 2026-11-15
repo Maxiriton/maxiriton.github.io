@@ -670,6 +670,140 @@ img {
 .form-submit { display: grid; gap: 1rem; justify-items: start; }
 .form-submit .small { opacity: .7; max-width: 30rem; }
 
+
+/* ==========================================================
+   Page Formation
+   ========================================================== */
+/* Chiffres clés sous l'introduction */
+.facts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 2rem;
+    list-style: none;
+    padding: 0;
+    margin: clamp(3rem, 6vw, 5rem) 0 0;
+    border-top: 1px solid rgba(42, 42, 33, .2);
+}
+@media (min-width: 992px) { .facts { grid-template-columns: repeat(4, 1fr); } }
+.facts li {
+    display: grid;
+    gap: .25rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(42, 42, 33, .2);
+}
+.facts strong {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+}
+.facts span { opacity: .8; }
+.facts strong sup { font-size: .4em; top: -1.3em; }
+
+/* Deux photos côte à côte, bord à bord */
+.photo-pair {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+    margin: 0;
+    padding: 0 var(--gap);
+}
+@media (min-width: 768px) { .photo-pair { grid-template-columns: 1fr 1fr; } }
+.photo-pair img {
+    width: 100%;
+    height: clamp(260px, 38vw, 620px);
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+}
+.photo-pair figcaption {
+    grid-column: 1 / -1;
+    padding: .5rem .25rem 2.5rem;
+    color: var(--ink-soft);
+}
+
+@media (min-width: 1200px) {
+    .service-detail--3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Livres */
+.books-section {
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 5rem);
+    border-top: 1px solid rgba(42, 42, 33, .2);
+    color: var(--ink-soft);
+    display: grid;
+    gap: 3rem;
+}
+@media (min-width: 992px) {
+    .books-section { grid-template-columns: 2fr 3fr; column-gap: 5rem; }
+    .books-more { grid-column: 2; }
+}
+.books-intro h2 {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 500;
+    line-height: 1.05;
+    margin: .4rem 0 1.25rem;
+}
+.books-list { display: grid; gap: var(--gap); }
+@media (min-width: 576px) { .books-list { grid-template-columns: 1fr 1fr; } }
+/* « couverture » typographique : pas d'image de couverture à gérer */
+.book {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    min-height: 22rem;
+    padding: 1.75rem;
+    background: var(--ink-soft);
+    color: var(--paper);
+    text-decoration: none;
+    transition: transform .3s ease, background-color .3s ease;
+}
+.book:hover { color: var(--paper); background: var(--ink); transform: translateY(-4px); }
+.book:focus-visible { outline: 2px solid var(--ink-soft); outline-offset: 3px; }
+.book-badge {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    border: 1px solid var(--paper);
+    border-radius: 999px;
+    padding: .2rem .7rem;
+    font-size: .85rem;
+}
+.book-publisher {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: .75rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    opacity: .7;
+}
+.book-title {
+    font-style: normal;
+    font-size: clamp(1.75rem, 3vw, 2.4rem);
+    line-height: 1.05;
+    margin-top: auto;
+}
+.book-desc { color: var(--muted); font-size: .95rem; }
+.books-more { margin: 0; }
+
+/* Témoignages */
+.testimonials {
+    background: var(--ink);
+    color: var(--paper);
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 5rem);
+}
+.quote--light { border-left-color: var(--paper); margin: 1.5rem 0 4rem; }
+.testimonials-grid {
+    display: grid;
+    gap: 2.5rem;
+    border-top: 1px solid rgba(226, 218, 201, .25);
+    padding-top: 2.5rem;
+}
+@media (min-width: 992px) { .testimonials-grid { grid-template-columns: repeat(3, 1fr); gap: 3rem; } }
+.testimonials-grid figure { margin: 0; }
+.testimonials-grid p { font-size: 1.1rem; font-style: italic; }
+.testimonials-grid figcaption,
+.quote--light figcaption { color: var(--muted); font-size: .9rem; }
+
 /* Menu à 4 entrées : resserré sur petit écran pour tenir sur une ligne */
 @media (max-width: 575.98px) {
     .nav-pills .nav-link {
