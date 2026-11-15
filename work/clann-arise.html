@@ -21,8 +21,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="../assets/css/main.css" rel="stylesheet">
-    <link href="../assets/css/custom.css?v=2026-11-15i" rel="stylesheet">
+    <link href="../assets/css/custom.css?v=2026-11-15m" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+    <script src="../assets/js/reveal.js" defer></script>
 
     <!-- Données structurées (SEO vidéo) -->
     <script type="application/ld+json">
@@ -43,11 +44,10 @@
 <body class="bg-altlight">
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-            <a href="https://www.henri-hebeisen.com"
+            <a href="../index.html"
                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                 <span class="fs-4">Henri Hebeisen</span>
             </a>
-
           <ul class="nav nav-pills">
             <li class="nav-item"><a href="../projets.html" class="nav-link nav-link-ltr">Projets</a></li>
             <li class="nav-item"><a href="../formation.html" class="nav-link nav-link-ltr">Formation</a></li>
@@ -57,74 +57,58 @@
         </header>
     </div>
 
-    <div class="container">
-        <div class="px-4 py-5 my-5 text-center reveal-fast">
-            <h1 class="display-4 fw-bold text-body-emphasis">Clann – Arise</h1>
-            <div class="col-lg-8 mx-auto my-4">
-                <p class="lead mb-4">Visualizer réalisé pour le morceau <strong>Arise</strong> du groupe <strong>Clann</strong>. J'ai pris en charge l'<strong>animation</strong>, le <strong>shading</strong> et le <strong>rendu</strong> du visuel, entièrement réalisés avec <strong>Blender</strong> et le moteur de rendu <strong>Cycles</strong>.</p>
-            </div>
-        </div>
-    </div>
+    <main>
+        <!-- Titre -->
+        <section class="page-intro page-intro--compact" aria-labelledby="titre" data-reveal-group>
+            <p class="eyebrow"><a href="../projets.html" class="back-link">← Projets</a> · Visualizer musical · 2023</p>
+            <h1 id="titre">Clann — Arise</h1>
+        </section>
 
-    <div class="container mb-5">
-        <div class="row">
-            <div class="col-lg-10 mx-auto reveal-medium">
-                <!-- Vidéo YouTube (chargement différé, mode sans cookies) -->
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube-nocookie.com/embed/gfJyKq7zhhA"
-                        title="Clann – Arise (Visualizer) – animation, shading et rendu Blender / Cycles"
-                        loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen></iframe>
-                </div>
-                <p class="text-center mt-3">
-                    <a class="text-body-secondary" href="https://www.youtube.com/watch?v=gfJyKq7zhhA" target="_blank" rel="noopener">Voir la vidéo sur YouTube</a>
-                </p>
-            </div>
-        </div>
+        <!-- Image principale, bord à bord -->
+        <figure class="project-cover">
+            <img width="1920" height="1080" src="../img/projects/arise.jpg" alt="Image du visualizer Clann – Arise, rendue avec Cycles.">
+        </figure>
 
-        <div class="row mt-4">
-            <div class="col-12 reveal-medium">
-                <img src="../img/projects/arise/sculpt_02.jpg" class="img-fluid" alt="Rendu Cycles du visualizer Clann Arise, scène 01" loading="lazy">
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-12 reveal-medium">
-                <img src="../img/projects/arise/sculpt_03.jpg" class="img-fluid" alt="Rendu Cycles du visualizer Clann Arise, scène 02" loading="lazy">
+        <!-- Fiche du projet + introduction -->
+        <section class="project-summary" aria-label="Le projet">
+            <dl class="project-meta" data-reveal-group>
+                <div><dt>Artiste</dt><dd>Clann</dd></div>
+                <div><dt>Morceau</dt><dd>Arise</dd></div>
+                <div><dt>Rôle</dt><dd>Animation, shading, rendu</dd></div>
+                <div><dt>Outils</dt><dd>Blender, Cycles</dd></div>
+            </dl>
+            <p class="project-lead" data-reveal>Un visualizer pour le morceau Arise du groupe Clann. J'ai pris en charge toute la chaîne 3D : mise en mouvement de la scène, création des matériaux et de l'ambiance, puis rendu final avec Cycles.</p>
+        </section>
+
+        <!-- Le visualizer -->
+        <div class="project-media" data-reveal-group>
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube-nocookie.com/embed/gfJyKq7zhhA" title="Clann – Arise (Visualizer) – animation, shading et rendu Blender / Cycles" loading="lazy"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
-    </div>
-
-    <div class="bg-dark text-secondary px-4 text-center">
-        <div class="container-fluid py-5 reveal-medium">
-            <h2 class="display-5 fw-bold text-altlight">Process &amp; Making-of</h2>
-            <div class="container">
-                <div class="row text-start mt-5 g-3 reveal-fast">
-                    <p class="lead text-altlight">Sur ce visualizer, j'ai réalisé l'ensemble de la chaîne de production 3D :</p>
-                    <ul class="lead text-altlight">
-                        <li><strong>Animation</strong> : mise en mouvement de la scène sous Blender.</li>
-                        <li><strong>Shading</strong> : création des matériaux et de l'ambiance visuelle.</li>
-                        <li><strong>Rendu</strong> : rendu final avec Cycles.</li>
-                    </ul>
-                </div>
-
-                <!--
-                    Making-of (viewport, wireframe, node editor des shaders...) : à ajouter.
-
-                <div class="row text-start mt-5 g-3 reveal-medium">
-                    <div class="col-md-6">
-                        <img src="../img/projects/clann/viewport.jpeg" class="img-fluid" alt="Vue du viewport Blender du visualizer Clann Arise">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="../img/projects/clann/shaders.jpeg" class="img-fluid" alt="Nodes de shading dans Blender pour le visualizer Clann Arise">
-                    </div>
-                </div>
-                -->
-            </div>
+        <!-- Images du visualizer -->
+        <div class="project-gallery" data-reveal-group>
+            <img width="1920" height="1080" class="is-wide" src="../img/projects/arise/sculpt_02.jpg" loading="lazy"
+                alt="Rendu Cycles du visualizer Clann – Arise, scène 1.">
+            <img width="1920" height="1080" class="is-wide" src="../img/projects/arise/sculpt_03.jpg" loading="lazy"
+                alt="Rendu Cycles du visualizer Clann – Arise, scène 2.">
         </div>
-    </div>
+
+        <!-- Projet suivant -->
+        <nav class="next-project" aria-label="Projet suivant">
+            <a class="case" href="rocket.html">
+                <img width="1024" height="576" src="../img/rocket.jpg" alt="" loading="lazy">
+                <span class="case-caption">
+                    <span class="eyebrow">Projet suivant</span>
+                    <strong>Rocket Project</strong>
+                </span>
+                <span class="case-more" aria-hidden="true">Voir le projet →</span>
+            </a>
+        </nav>
+    </main>
 
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-secondary">
@@ -138,23 +122,6 @@
             </ul>
         </footer>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            ScrollReveal().reveal('.reveal-fast', {
-                duration: 1500
-            });
-            ScrollReveal().reveal('.reveal-medium', {
-                duration: 2500
-            });
-            ScrollReveal().reveal('.reveal-slow', {
-                duration: 3500
-            });
-        });
-    </script>
 </body>
 
 </html>

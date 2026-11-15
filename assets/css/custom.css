@@ -888,6 +888,22 @@ img {
     .project-gallery .is-wide { aspect-ratio: 2.35 / 1; }
 }
 
+/* galerie « naturelle » : respecte le format des images (portrait, carré, panoramique) */
+@media (min-width: 768px) {
+    .project-gallery--natural { grid-template-columns: repeat(6, 1fr); }
+    .project-gallery--natural > * { grid-column: span 3; }
+    .project-gallery--natural > .is-wide { grid-column: 1 / -1; }
+    .project-gallery--natural > .is-third { grid-column: span 2; }
+}
+.project-gallery--natural img,
+.project-gallery--natural .is-wide { aspect-ratio: auto; height: auto; }
+/* côte à côte : même hauteur par rangée, l'image la plus courte est recadrée */
+@media (min-width: 768px) {
+    .project-gallery--natural img { height: 100%; }
+}
+
+.project-feature-media video { display: block; width: 100%; max-height: 70vh; }
+
 .service-detail a { color: var(--paper); }
 .service-detail a:hover { color: #fff; }
 
@@ -908,7 +924,7 @@ img {
 }
 .project-feature-text p:not(.eyebrow) { font-size: 1.1rem; max-width: 38rem; }
 .project-feature-media { margin: 0; justify-self: center; }
-.project-feature-media img { max-height: 70vh; width: auto; max-width: 100%; }
+.project-feature-media img { display: block; height: min(70vh, 900px); width: auto; max-width: 100%; object-fit: contain; }
 
 /* vidéo et captures pleine largeur */
 .project-media {
@@ -920,6 +936,7 @@ img {
 .project-media img {
     display: block;
     width: 100%;
+    height: auto;
     border-radius: 0;
     box-shadow: none;
     background: var(--ink);
