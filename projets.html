@@ -2,78 +2,99 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projets 3D – Tudor, Airbus et plus | Henri Hebeisen</title>
-    <meta property="og:description" content="Sélection de projets 3D réalisés avec Blender : Tudor, Airbus, Clann, La Plus Précieuse des Marchandises.">
-    <meta property="og:site_name" content="Henri Hebeisen">
-    <meta property="og:image" content="https://www.henri-hebeisen.com/img/projects/lppm.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="description" content="Sélection de projets 3D et de productions auxquels j'ai contribué, dont Tudor et Airbus. Découvrez le détail de chaque réalisation.">
+    <meta name="description" content="Projets 3D réalisés avec Blender : direction technique de La Plus Précieuse des Marchandises, Tudor, Airbus, Clann et Rocket Project. Rôle, outils et détails de chaque réalisation.">
     <link rel="canonical" href="https://www.henri-hebeisen.com/projets.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Henri Hebeisen">
     <meta property="og:title" content="Projets 3D – Henri Hebeisen">
+    <meta property="og:description" content="Sélection de projets 3D réalisés avec Blender : Tudor, Airbus, Clann, La Plus Précieuse des Marchandises.">
     <meta property="og:url" content="https://www.henri-hebeisen.com/projets.html">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://www.henri-hebeisen.com/img/projects/lppm.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="assets/css/main.css" rel="stylesheet">
-    <link href="assets/css/custom.css?v=2026-11-15e" rel="stylesheet">
+    <link href="assets/css/custom.css?v=2026-11-15h" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+    <script src="assets/js/reveal.js" defer></script>
   </head>
   <body class="bg-altlight">
-
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-          <a href="https://www.henri-hebeisen.com" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <span class="fs-4">Henri Hebeisen</span>
           </a>
-    
           <ul class="nav nav-pills">
-            <li class="nav-item"><a href="projets.html" class="nav-link nav-link-ltr">Projets</a></li>
-            <li class="nav-item"><a href="formation.html" class="nav-link nav-link-ltr ">Formation</a></li>
+            <li class="nav-item"><a href="projets.html" class="nav-link nav-link-ltr" aria-current="page">Projets</a></li>
+            <li class="nav-item"><a href="formation.html" class="nav-link nav-link-ltr">Formation</a></li>
             <li class="nav-item"><a href="prestations.html" class="nav-link nav-link-ltr">Prestations</a></li>
             <li class="nav-item"><a href="contact.html" class="nav-link nav-link-ltr">Contact</a></li>
           </ul>
         </header>
     </div>
 
-<div class="container">
-     <div class="row g-2">
-         <div class="col-lg-6 md-12">
-             <div class="gallery_item">
-              <a href="work/tudor.html">
-                     <div class="content-overlay"></div> <img class="content-image" src="img/projects/tudor.jpg" alt="Rendu 3D de la montre Tudor Heritage Ranger" loading="lazy">
-                     <div class="content-details fadeIn-bottom">
-                         <h3 class="content-title">Tudor - Heritage Ranger</h3>
-                     </div>
-                 </a> 
-            </div>
-         </div>
-         <div class="col-lg-6 md-12">
-             <div class="gallery_item"> <a href="work/marchandise.html">
-                     <div class="content-overlay"></div> <img class="content-image" src="img/projects/lppm.jpg" alt="Image du film La Plus Précieuse des Marchandises" loading="lazy">
-                     <div class="content-details fadeIn-bottom">
-                         <h3 class="content-title">La plus précieuse des Marchandises</h3>
-                     </div>
-                 </a> </div>
-         </div>
-         <div class="col-lg-6 md-12">
-             <div class="gallery_item"> <a href="work/clann-arise.html">
-                     <div class="content-overlay"></div> <img class="content-image" src="img/projects/arise.jpg" alt="Image du visualizer Clann – Arise" loading="lazy">
-                     <div class="content-details fadeIn-bottom">
-                         <h3 class="content-title">Clann - Arise</h3>
-                      </div>
-                 </a> </div>
-         </div>
-         <div class="col-lg-6 md-12">
-             <div class="gallery_item"> <a href="work/airbus-future-factory.html">
-                     <div class="content-overlay"></div> <img class="content-image" src="img/projects/airbus_future_factory.jpg" alt="Image du film Airbus – Inside the Future Factory" loading="lazy">
-                     <div class="content-details fadeIn-bottom">
-                         <h3 class="content-title">Airbus - Inside the future factory</h3>
-                      </div>
-                 </a> </div>
-         </div>
-     </div>
- </div>
+    <main>
+      <!-- Introduction : réduite au titre, les images parlent -->
+      <section class="page-intro page-intro--compact" aria-labelledby="titre" data-reveal-group>
+        <p class="eyebrow">Projets</p>
+        <h1 id="titre">Travaux</h1>
+      </section>
+
+      <!-- Un projet = une grande image ; le détail est dans la page du projet -->
+      <section class="case-list" aria-label="Liste des projets">
+        <a class="case" href="work/marchandise.html" data-reveal>
+          <img src="img/projects/lppm/la-plus-precieuse-des-marchandises.jpg" alt="" loading="eager">
+          <span class="case-caption">
+            <span class="eyebrow">Long métrage d'animation · Direction technique</span>
+            <strong>La Plus Précieuse des Marchandises</strong>
+          </span>
+          <span class="case-more" aria-hidden="true">Voir le projet →</span>
+        </a>
+        <a class="case" href="work/tudor.html" data-reveal>
+          <img src="img/projects/tudor.jpg" alt="" loading="lazy">
+          <span class="case-caption">
+            <span class="eyebrow">Projet personnel · Modélisation, LookDev</span>
+            <strong>Tudor — Heritage Ranger</strong>
+          </span>
+          <span class="case-more" aria-hidden="true">Voir le projet →</span>
+        </a>
+        <a class="case" href="work/airbus-future-factory.html" data-reveal>
+          <img src="img/projects/airbus_future_factory.jpg" alt="" loading="lazy">
+          <span class="case-caption">
+            <span class="eyebrow">Film corporate · Pipeline, rendu</span>
+            <strong>Airbus — Inside the Future Factory</strong>
+          </span>
+          <span class="case-more" aria-hidden="true">Voir le projet →</span>
+        </a>
+        <a class="case" href="work/clann-arise.html" data-reveal>
+          <img src="img/projects/arise.jpg" alt="" loading="lazy">
+          <span class="case-caption">
+            <span class="eyebrow">Visualizer musical · Animation, Cycles</span>
+            <strong>Clann — Arise</strong>
+          </span>
+          <span class="case-more" aria-hidden="true">Voir le projet →</span>
+        </a>
+        <a class="case" href="work/rocket.html" data-reveal>
+          <img src="img/rocket.jpg" alt="" loading="lazy">
+          <span class="case-caption">
+            <span class="eyebrow">Court métrage · En cours</span>
+            <strong>Rocket Project</strong>
+          </span>
+          <span class="case-more" aria-hidden="true">Voir le projet →</span>
+        </a>
+      </section>
+
+      <!-- Appel à l'action -->
+      <div class="closing">
+        <section class="cta" aria-labelledby="contact-titre" data-reveal>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-titre">Un projet ? <a href="contact.html">Parlons-en.</a></h2>
+          <p>Direction technique, <a href="prestations.html">consulting</a> ou <a href="formation.html">formation</a> : décrivez-moi votre besoin.</p>
+        </section>
+      </div>
+    </main>
 
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-secondary">
@@ -87,16 +108,5 @@
             </ul>
         </footer>
     </div>
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            ScrollReveal().reveal('.reveal-fast', { duration: 1500 });
-            ScrollReveal().reveal('.reveal-medium', { duration: 2500 });
-            ScrollReveal().reveal('.reveal-slow', { duration: 3500 });
-        });
-    </script>
   </body>
-  </html>
-  
+</html>
