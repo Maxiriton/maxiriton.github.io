@@ -909,6 +909,9 @@ img {
 .project-feature-media--wide { justify-self: stretch; }
 .project-feature-media.project-feature-media--wide img { width: 100%; height: auto; max-height: none; }
 
+/* mention de copyright sous une galerie */
+.project-credit { margin: calc(-1 * clamp(3rem, 6vw, 5rem) + .75rem) var(--gap) clamp(3rem, 6vw, 5rem); padding: 0 .25rem; color: var(--ink-soft); }
+
 .service-detail a { color: var(--paper); }
 .service-detail a:hover { color: #fff; }
 
