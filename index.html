@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/custom.css?v=2026-11-15e" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+    <script src="assets/js/reveal.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -81,7 +83,7 @@
 
       <!-- 1. PROJETS : les images d'abord, texte réduit à une légende -->
       <section id="projets" class="work" aria-labelledby="projets-titre">
-        <div class="work-head">
+        <div class="work-head" data-reveal>
           <div>
             <p class="eyebrow">Projets sélectionnés</p>
             <h2 id="projets-titre">Travaux</h2>
@@ -89,7 +91,7 @@
           <a href="projets.html" class="link-arrow">Tous les projets →</a>
         </div>
 
-        <div class="work-grid">
+        <div class="work-grid" data-reveal-group>
           <article class="tile tile--wide">
             <a href="work/marchandise.html">
               <div class="tile-media">
@@ -170,10 +172,10 @@
 
       <!-- 2. FORMATION : une grande photo, un message, une preuve -->
       <section id="formation" class="training" aria-labelledby="formation-titre">
-        <div class="training-media">
+        <div class="training-media" data-reveal>
           <img src="img/formation/training_focal.jpg" alt="Formation Blender en présentiel à Neuchâtel, en Suisse" loading="lazy">
         </div>
-        <div class="training-body">
+        <div class="training-body" data-reveal-group>
           <p class="eyebrow">Formation</p>
           <h2 id="formation-titre">Former vos équipes à Blender, avec l'expérience de la production.</h2>
           <p class="lead">Formateur certifié, j'anime des formations sur mesure, en présentiel ou à distance, en équipe ou en 1 to 1.</p>
@@ -191,7 +193,7 @@
         </div>
       </section>
 
-      <div class="clients">
+      <div class="clients" data-reveal>
         <p class="eyebrow">Ils m'ont fait confiance</p>
         <div class="logo-strip">
           <img src="img/formation/airbus.webp" alt="Airbus" loading="lazy">
@@ -207,14 +209,14 @@
 
       <!-- 3. PRESTATIONS : liste numérotée, lisible en un coup d'œil -->
       <section id="prestations" class="services" aria-labelledby="prestations-titre">
-        <div class="services-intro">
+        <div class="services-intro" data-reveal>
           <div>
             <p class="eyebrow">Prestations</p>
             <h2 id="prestations-titre">Direction technique et consulting Blender</h2>
           </div>
           <p class="mb-0" style="color: var(--muted)">Directeur technique du studio 3.0 à Angoulême, j'interviens aussi en freelance auprès des studios et des entreprises pour débloquer et structurer leurs projets 3D.</p>
         </div>
-        <ul class="services-list">
+        <ul class="services-list" data-reveal-group>
           <li>
             <span class="num">01</span>
             <h3>Pipeline de production</h3>
@@ -241,7 +243,7 @@
 
       <!-- Publications (réduites) + appel à l'action final -->
       <div class="closing">
-        <section class="books" aria-labelledby="publications-titre">
+        <section class="books" aria-labelledby="publications-titre" data-reveal>
           <div>
             <p class="eyebrow">Publications</p>
             <h2 id="publications-titre" class="h4 mt-2">Auteur chez Eyrolles et Elephorm</h2>
@@ -253,7 +255,7 @@
           </ul>
         </section>
 
-        <section class="cta" aria-labelledby="contact-titre">
+        <section class="cta" aria-labelledby="contact-titre" data-reveal>
           <p class="eyebrow">Contact</p>
           <h2 id="contact-titre">Un projet ? <a href="contact.html">Parlons-en.</a></h2>
           <p>Ou retrouvez-moi sur <a href="https://www.linkedin.com/in/henrihebeisen/">LinkedIn</a> et <a href="https://mastodon.social/@henrih" rel="me">Mastodon</a>.</p>

@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/custom.css?v=2026-11-15e" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+    <script src="assets/js/reveal.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -47,7 +49,7 @@
 
     <main>
       <!-- Introduction -->
-      <section class="page-intro" aria-labelledby="titre">
+      <section class="page-intro" aria-labelledby="titre" data-reveal-group>
         <p class="eyebrow">Prestations</p>
         <h1 id="titre">Direction technique et consulting Blender</h1>
         <div class="page-intro-cols">
@@ -62,7 +64,7 @@
 
       <!-- 1. Les prestations en détail -->
       <section class="services" aria-labelledby="services-titre">
-        <div class="services-intro">
+        <div class="services-intro" data-reveal>
           <div>
             <p class="eyebrow">Ce que je fais</p>
             <h2 id="services-titre">Quatre façons de travailler ensemble</h2>
@@ -71,7 +73,7 @@
             L'objectif est toujours de vous laisser une solution que vos équipes maîtrisent.</p>
         </div>
 
-        <div class="service-detail">
+        <div class="service-detail" data-reveal-group>
           <article>
             <span class="num">01</span>
             <h3>Pipeline de production</h3>
@@ -117,14 +119,14 @@
 
       <!-- 2. Preuves : projets où ces prestations ont été mises en œuvre -->
       <section class="work" aria-labelledby="production-titre">
-        <div class="work-head">
+        <div class="work-head" data-reveal>
           <div>
             <p class="eyebrow">En production</p>
             <h2 id="production-titre">Quelques réalisations</h2>
           </div>
           <a href="projets.html" class="link-arrow">Tous les projets →</a>
         </div>
-        <div class="work-grid">
+        <div class="work-grid" data-reveal-group>
           <article class="tile tile--wide">
             <a href="work/marchandise.html">
               <div class="tile-media">
@@ -164,8 +166,8 @@
       <!-- 3. Déroulement d'une mission -->
       <section class="steps-section" aria-labelledby="methode-titre">
         <p class="eyebrow">Méthode</p>
-        <h2 id="methode-titre">Comment se passe une mission</h2>
-        <ol class="steps">
+        <h2 id="methode-titre" data-reveal>Comment se passe une mission</h2>
+        <ol class="steps" data-reveal-group>
           <li>
             <span class="num">01</span>
             <h3>Échange</h3>
@@ -188,7 +190,7 @@
           </li>
         </ol>
 
-        <figure class="quote quote--large">
+        <figure class="quote quote--large" data-reveal>
           <blockquote>
             <p>« Son excellente connaissance technique de la 3D lui permet de résoudre avec brio les problématiques,
               grâce à des solutions toujours ingénieuses et élégantes. »</p>
@@ -199,7 +201,7 @@
 
       <!-- Appel à l'action -->
       <div class="closing pt-0">
-        <section class="cta" aria-labelledby="contact-titre">
+        <section class="cta" aria-labelledby="contact-titre" data-reveal>
           <p class="eyebrow">Contact</p>
           <h2 id="contact-titre">Un projet ? <a href="contact.html">Parlons-en.</a></h2>
           <p>Ou retrouvez-moi sur <a href="https://www.linkedin.com/in/henrihebeisen/">LinkedIn</a> et <a href="https://mastodon.social/@henrih" rel="me">Mastodon</a>.</p>
