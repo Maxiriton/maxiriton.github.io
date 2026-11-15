@@ -5,99 +5,122 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact – Directeur technique et formateur Blender | Henri Hebeisen</title>
-    <meta property="og:description" content="Un projet 3D, un besoin de formation Blender ? Écrivez-moi.">
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:image" content="https://www.henri-hebeisen.com/img/og-accueil.jpg">
-    <meta name="twitter:card" content="summary_large_image">
     <meta name="description" content="Contactez Henri Hebeisen, directeur technique, consultant freelance et formateur certifié Blender : projets 3D, pipeline, formations.">
     <link rel="canonical" href="https://www.henri-hebeisen.com/contact.html">
     <meta name="author" content="Henri Hebeisen">
-
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Henri Hebeisen">
     <meta property="og:title" content="Contact | Henri Hebeisen">
+    <meta property="og:description" content="Un projet 3D, un besoin de formation Blender ? Écrivez-moi.">
     <meta property="og:url" content="https://www.henri-hebeisen.com/contact.html">
-
+    <meta property="og:image" content="https://www.henri-hebeisen.com/img/og-accueil.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="assets/css/main.css" rel="stylesheet">
-    <link href="assets/css/custom.css?v=2026-11-15c" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+    <link href="assets/css/custom.css?v=2026-11-15d" rel="stylesheet">
 </head>
 
 <body class="bg-altlight">
     <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-            <a href="https://www.henri-hebeisen.com"
+        <header class="d-flex flex-wrap justify-content-center py-3">
+            <a href="index.html"
                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
                 <span class="fs-4">Henri Hebeisen</span>
             </a>
-
           <ul class="nav nav-pills">
             <li class="nav-item"><a href="projets.html" class="nav-link nav-link-ltr">Projets</a></li>
             <li class="nav-item"><a href="formation.html" class="nav-link nav-link-ltr">Formation</a></li>
             <li class="nav-item"><a href="prestations.html" class="nav-link nav-link-ltr">Prestations</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link nav-link-ltr">Contact</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link nav-link-ltr" aria-current="page">Contact</a></li>
           </ul>
         </header>
     </div>
 
-    <div class="container">
-        <div class="px-4 py-5 my-5 text-center reveal-fast">
-            <h1 class="display-4 fw-bold text-body-emphasis">Contact</h1>
-            <div class="col-lg-8 mx-auto my-4">
-                <p class="lead mb-4">Un projet 3D, un besoin de consulting sur Blender ou sur votre pipeline de production, une formation ? Décrivez-moi votre demande, je vous réponds rapidement.</p>
+    <main class="contact">
+        <!-- Colonne image : un rendu en grand, le titre et les coordonnées directes -->
+        <aside class="contact-aside">
+            <img src="img/hero-poster.jpg" alt="" class="contact-aside-img">
+            <div class="contact-aside-body">
+                <p class="eyebrow">Contact</p>
+                <h1>Parlons de votre projet.</h1>
+                <p class="contact-aside-lead">Un projet 3D, un besoin de consulting sur Blender ou sur votre pipeline, une formation ?
+                    Décrivez-moi votre demande, je vous réponds rapidement.</p>
+                <dl class="contact-details">
+                    <div>
+                        <dt>E-mail</dt>
+                        <dd><a href="mailto:henri.hebeisen@gmail.com">henri.hebeisen@gmail.com</a></dd>
+                    </div>
+                    <div>
+                        <dt>Basé à</dt>
+                        <dd>Bidart — interventions en France, Suisse et Belgique, sur site ou à distance</dd>
+                    </div>
+                    <div>
+                        <dt>Ailleurs</dt>
+                        <dd>
+                            <a href="https://www.linkedin.com/in/henrihebeisen/">LinkedIn</a> ·
+                            <a href="https://mastodon.social/@henrih" rel="me">Mastodon</a>
+                        </dd>
+                    </div>
+                </dl>
             </div>
-        </div>
-    </div>
+        </aside>
 
-    <div class="container mb-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-7 reveal-medium">
-                <form action="https://api.web3forms.com/submit" method="POST" class="row g-3">
-                    <input type="hidden" name="access_key" value="475756f8-b75a-4ad8-8877-288bc5faa345">
-                    <input type="hidden" name="subject" value="Nouveau message depuis henri-hebeisen.com">
-                    <input type="hidden" name="from_name" value="Site henri-hebeisen.com">
-                    <input type="hidden" name="redirect" value="https://www.henri-hebeisen.com/merci.html">
+        <!-- Colonne formulaire -->
+        <section class="contact-form-wrap" aria-labelledby="form-titre">
+            <h2 id="form-titre" class="visually-hidden">Formulaire de contact</h2>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="475756f8-b75a-4ad8-8877-288bc5faa345">
+                <input type="hidden" name="subject" value="Nouveau message depuis henri-hebeisen.com">
+                <input type="hidden" name="from_name" value="Site henri-hebeisen.com">
+                <input type="hidden" name="redirect" value="https://www.henri-hebeisen.com/merci.html">
 
-                    <div class="col-md-6">
-                        <label for="nom" class="form-label">Nom</label>
-                        <input type="text" id="nom" name="name" class="form-control" autocomplete="name" required>
+                <fieldset class="field">
+                    <legend class="eyebrow">Votre demande concerne</legend>
+                    <div class="chips">
+                        <input type="radio" id="sujet-projet" name="sujet" value="Projet / prestation" checked>
+                        <label for="sujet-projet">Un projet 3D</label>
+                        <input type="radio" id="sujet-consulting" name="sujet" value="Consulting / pipeline">
+                        <label for="sujet-consulting">Consulting / pipeline</label>
+                        <input type="radio" id="sujet-formation" name="sujet" value="Formation">
+                        <label for="sujet-formation">Une formation</label>
+                        <input type="radio" id="sujet-autre" name="sujet" value="Autre">
+                        <label for="sujet-autre">Autre chose</label>
                     </div>
-                    <div class="col-md-6">
-                        <label for="email" class="form-label">E-mail</label>
-                        <input type="email" id="email" name="email" class="form-control" autocomplete="email" required>
-                    </div>
-                    <div class="col-12">
-                        <label for="sujet" class="form-label">Sujet</label>
-                        <select id="sujet" name="sujet" class="form-select">
-                            <option value="Projet / prestation">Projet / prestation</option>
-                            <option value="Consulting / pipeline">Consulting / pipeline</option>
-                            <option value="Formation">Formation</option>
-                            <option value="Autre">Autre</option>
-                        </select>
-                    </div>
-                    <div class="col-12">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" rows="7" class="form-control" required></textarea>
-                    </div>
+                </fieldset>
 
-                    <!-- Anti-spam : champ caché que seuls les robots remplissent -->
-                    <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off">
-
-                    <div class="col-12">
-                        <p class="small text-body-secondary mb-0">Les informations saisies servent uniquement à répondre à votre demande et ne sont pas conservées sur ce site.</p>
+                <div class="field-row">
+                    <div class="field">
+                        <label for="nom" class="eyebrow">Nom</label>
+                        <input type="text" id="nom" name="name" autocomplete="name" required>
                     </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-dark btn-lg">Envoyer</button>
+                    <div class="field">
+                        <label for="email" class="eyebrow">E-mail</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
                     </div>
-                </form>
+                </div>
 
-                <p class="mt-5 text-center text-body-secondary">
-                    Vous préférez écrire directement ? <a class="text-body-secondary" href="mailto:henri.hebeisen@gmail.com">henri.hebeisen@gmail.com</a>
-                </p>
-            </div>
-        </div>
-    </div>
+                <div class="field">
+                    <label for="societe" class="eyebrow">Studio ou entreprise <span class="optional">(facultatif)</span></label>
+                    <input type="text" id="societe" name="societe" autocomplete="organization">
+                </div>
+
+                <div class="field">
+                    <label for="message" class="eyebrow">Message</label>
+                    <textarea id="message" name="message" rows="6" required
+                        placeholder="Quelques mots sur votre projet, vos délais, votre équipe…"></textarea>
+                </div>
+
+                <!-- Anti-spam : champ caché que seuls les robots remplissent -->
+                <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off">
+
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-dark btn-lg px-4">Envoyer le message <span aria-hidden="true">→</span></button>
+                    <p class="small mb-0">Les informations saisies servent uniquement à répondre à votre demande et ne sont pas conservées sur ce site.</p>
+                </div>
+            </form>
+        </section>
+    </main>
 
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-secondary">
@@ -111,23 +134,6 @@
             </ul>
         </footer>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            ScrollReveal().reveal('.reveal-fast', {
-                duration: 1500
-            });
-            ScrollReveal().reveal('.reveal-medium', {
-                duration: 2500
-            });
-            ScrollReveal().reveal('.reveal-slow', {
-                duration: 3500
-            });
-        });
-    </script>
 </body>
 
 </html>
