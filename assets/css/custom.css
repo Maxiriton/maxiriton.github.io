@@ -858,6 +858,7 @@ img {
     padding-top: .2rem;
 }
 .project-meta dd { margin: 0; }
+.project-meta--wide > div { grid-template-columns: 11rem 1fr; }
 .project-lead {
     font-size: clamp(1.3rem, 2.2vw, 1.9rem);
     line-height: 1.35;
