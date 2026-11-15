@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Abstract Landscapes – Paysages abstraits avec Blender et Cycles | Henri Hebeisen</title>
+    <meta name="description" content="Une série de paysages abstraits faits de centaines de milliers de primitives, inspirée de Lee Griggs : particules hair rendues avec Cycles, hauteur pilotée par une image. Relayée par BlenderNation.">
+    <link rel="canonical" href="https://www.henri-hebeisen.com/work/landscape.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Henri Hebeisen">
+    <meta property="og:title" content="Abstract Landscapes – Paysages abstraits avec Blender et Cycles">
+    <meta property="og:description" content="Des paysages abstraits faits de 600 000 particules, rendus avec Cycles et sculptés par une simple image.">
+    <meta property="og:url" content="https://www.henri-hebeisen.com/work/landscape.html">
+    <meta property="og:image" content="https://www.henri-hebeisen.com/img/projects/landscape/landscape-6.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/custom.css?v=2026-11-15p" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+    <script src="../assets/js/reveal.js?v=2" defer></script>
+</head>
+
+<body class="bg-altlight">
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+            <a href="../index.html"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <span class="fs-4">Henri Hebeisen</span>
+            </a>
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="../projets.html" class="nav-link nav-link-ltr">Projets</a></li>
+            <li class="nav-item"><a href="../formation.html" class="nav-link nav-link-ltr">Formation</a></li>
+            <li class="nav-item"><a href="../prestations.html" class="nav-link nav-link-ltr">Prestations</a></li>
+            <li class="nav-item"><a href="../contact.html" class="nav-link nav-link-ltr">Contact</a></li>
+          </ul>
+        </header>
+    </div>
+
+    <main>
+        <!-- Titre -->
+        <section class="page-intro page-intro--compact" aria-labelledby="titre" data-reveal-group>
+            <p class="eyebrow"><a href="../projets.html" class="back-link">← Projets</a> · Projet personnel · 2014</p>
+            <h1 id="titre">Abstract Landscapes</h1>
+        </section>
+
+        <!-- Image principale, bord à bord -->
+        <figure class="project-cover">
+            <img width="2048" height="848" src="../img/projects/landscape/landscape-6.jpg"
+                alt="Paysage abstrait vu d'avion : des milliers de bâtonnets bleu-vert forment des parcelles et des lacs.">
+        </figure>
+
+        <!-- Fiche du projet + introduction -->
+        <section class="project-summary" aria-label="Le projet">
+            <dl class="project-meta" data-reveal-group>
+                <div><dt>Type</dt><dd>Projet personnel</dd></div>
+                <div><dt>Inspiration</dt><dd>Lee Griggs</dd></div>
+                <div><dt>Outils</dt><dd>Blender, Cycles, particules</dd></div>
+                <div><dt>Relayé par</dt><dd><a href="https://www.blendernation.com/2014/11/07/abstract-landscape-with-blender-lee-griggs-style/">BlenderNation</a>,
+                    <a href="https://blenderartists.org/t/abstract-landscapes/623613">BlenderArtists</a></dd></div>
+            </dl>
+            <p class="project-lead" data-reveal>Une série de paysages abstraits faits uniquement de primitives simples,
+                à la manière de Lee Griggs. Né d'un défi d'une journée pendant le Blender Month Challenge,
+                le projet m'a occupé quelques jours de plus pour trouver la bonne technique.</p>
+        </section>
+
+        <!-- Galerie de rendus -->
+        <div class="project-gallery project-gallery--natural" data-reveal-group>
+            <img width="1920" height="1080" src="../img/projects/landscape/landscape-1.jpg" loading="lazy"
+                alt="Paysage abstrait rouge et rose, sillons de bâtonnets en lumière rasante.">
+            <img width="1920" height="1080" src="../img/projects/landscape/landscape-2.jpg" loading="lazy"
+                alt="Paysage abstrait vert sombre, rangées ondulées comme des champs vus de près.">
+            <img class="is-wide" width="2048" height="848" src="../img/projects/landscape/landscape-4.jpg" loading="lazy"
+                alt="Paysage abstrait bleu et sable, ondulations en relief comme des dunes.">
+            <img width="2048" height="848" src="../img/projects/landscape/landscape-5.jpg" loading="lazy"
+                alt="Gros plan sur des bâtonnets dorés de hauteurs variées, comme une forêt miniature.">
+            <img width="2048" height="848" src="../img/projects/landscape/landscape-8.jpg" loading="lazy"
+                alt="Paysage abstrait vert, reliefs arrondis comme des collines boisées.">
+            <img class="is-wide" width="2048" height="848" src="../img/projects/landscape/landscape-7.jpg" loading="lazy"
+                alt="Île abstraite blanche et grise faite de bâtonnets, isolée sur fond noir.">
+        </div>
+
+        <!-- Technique -->
+        <section class="services" aria-labelledby="technique-titre">
+            <div class="services-intro" data-reveal>
+                <div>
+                    <p class="eyebrow">Technique</p>
+                    <h2 id="technique-titre">600 000 particules et une image</h2>
+                </div>
+                <p class="mb-0" style="color: var(--muted)">Le principe : des centaines de milliers de bâtonnets verticaux,
+                    dont la hauteur est dictée par une simple image. Tout l'enjeu était de trouver une méthode que Blender
+                    puisse encaisser.</p>
+            </div>
+            <div class="service-detail" data-reveal-group>
+                <article>
+                    <span class="num">01</span>
+                    <h3>Première piste : Python</h3>
+                    <p>Un script crée un cube par pixel d'une image et l'étire selon sa luminance. Parfait sur de petites images,
+                        mais Blender sature au-delà de quelques milliers d'instances, alors qu'il en fallait environ 500 000.</p>
+                </article>
+                <article>
+                    <span class="num">02</span>
+                    <h3>La solution : des particules</h3>
+                    <p>Un système de particules hair génère 600 000 brins verticaux, que Cycles rend comme de simples cylindres
+                        (primitives <em>Line Segment</em>, forme <em>Thick</em>). Le rendu de centaines de milliers de brins ne pose aucun problème.</p>
+                </article>
+                <article>
+                    <span class="num">03</span>
+                    <h3>Une image pilote la hauteur</h3>
+                    <p>Un modificateur <em>VertexWeightEdit</em> convertit une texture (ici, un gros plan de chou-fleur) en groupe de sommets,
+                        qui contrôle la longueur des particules. Un <em>Displace</em> sur la même texture déforme le sol.</p>
+                </article>
+                <article>
+                    <span class="num">04</span>
+                    <h3>Matériau et compositing</h3>
+                    <p>La même texture, passée dans une <em>color ramp</em>, colore le paysage, avec un léger glossy et un peu de translucidité.
+                        Au compositing : glare discret, dégradé blanc pour l'atmosphère et vignettage.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Coulisses : captures de Blender -->
+        <div class="project-gallery project-gallery--natural project-gallery--ui" data-reveal-group>
+            <img class="is-wide" width="1388" height="525" src="../img/projects/landscape/landscape-grid.jpg" loading="lazy"
+                alt="Le plan très subdivisé dans le viewport de Blender, vu de dessus avec la caméra.">
+            <img class="is-third" width="477" height="371" src="../img/projects/landscape/landscape-modif.jpg" loading="lazy"
+                alt="Réglages du modificateur VertexWeightEdit : falloff Sphere, poids par défaut 0,5, canal rouge.">
+            <img class="is-third" width="477" height="716" src="../img/projects/landscape/landscape-modif2.jpg" loading="lazy"
+                alt="La texture de chou-fleur utilisée pour piloter la hauteur des particules.">
+            <img class="is-third" width="474" height="720" src="../img/projects/landscape/landscape-modif3.jpg" loading="lazy"
+                alt="La pile de modificateurs : VertexWeightEdit, Displace et système de particules.">
+            <img width="800" height="293" src="../img/projects/landscape/landscape-material.jpg" loading="lazy"
+                alt="L'arbre de nodes du matériau dans Cycles : texture, color ramp, glossy et translucidité.">
+            <img width="1370" height="578" src="../img/projects/landscape/landscape-compositing.jpg" loading="lazy"
+                alt="L'arbre de nodes de compositing : glare, dégradé et vignettage.">
+        </div>
+
+        <!-- Projet suivant -->
+        <nav class="next-project" aria-label="Projet suivant">
+            <a class="case" href="marchandise.html">
+                <img width="2560" height="1384" src="../img/projects/lppm/la-plus-precieuse-des-marchandises.jpg" alt="" loading="lazy">
+                <span class="case-caption">
+                    <span class="eyebrow">Projet suivant</span>
+                    <strong>La Plus Précieuse des Marchandises</strong>
+                </span>
+                <span class="case-more" aria-hidden="true">Voir le projet →</span>
+            </a>
+        </nav>
+    </main>
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top border-secondary">
+            <div class="d-flex align-items-center">
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2026 Henri Hebeisen</span>
+            </div>
+            <ul class="nav justify-content-end align-items-center list-unstyled d-flex">
+                <li class="ms-3 text-body-secondary">SIRET : 80128450600020</li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/henrihebeisen/" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5" aria-hidden="true"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://mastodon.social/@henrih" rel="me" aria-label="Mastodon"><i class="bi bi-mastodon fs-5" aria-hidden="true"></i></a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
