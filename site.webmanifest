@@ -1,0 +1,11 @@
+{
+  "name": "Henri Hebeisen",
+  "short_name": "H. Hebeisen",
+  "icons": [
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "theme_color": "#16160f",
+  "background_color": "#E2DAC9",
+  "display": "browser"
+}
